@@ -21,6 +21,7 @@
 * Asign issues to one or two developers
 * Timebox issues to 20 minutes before taking the issue to the group/TAs
 
+
 ### Completing Issues
 * Add all new issues to jira board
 * Assign yourself specific tasks
