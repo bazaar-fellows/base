@@ -27,10 +27,10 @@ I helped create and/or I agree to this plan and will follow it to the best of my
 
 Signed: Lena Eivy Date: 2-24-2019<br>
 
-Signed: <br>
+Signed: Heather Cherewaty: 2-24-2019<br>
 
-Signed: <br>
+Signed: Tanner Seramur: 2-24-2019<br>
 
-Signed: <br>
+Signed: Caity Heath: 2-24-2019<br>
 
-Signed: <br>
+Signed: Hannah Ingham: 2-24-2019<br>
