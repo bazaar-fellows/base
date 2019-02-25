@@ -1,7 +1,15 @@
 # User Stories
 
 ###  User 
+As a user I want to be able to create a store so that I can get my products out to my consumers in a reliable fashion.
 
+As a user I want to be able to easily manage and update my store so my consumers can see my most up to date inventory.
+
+As a user I want consumers of my products to be able to easily find and purchase the products they are looking for.
+
+As a user I want my customers to have an enjoyable experience while searching for products on my site.
+
+As a user I want my store to have a safe, secure process for payments so my customers feel comfortable when purchasing items through my site.
 
 
 ###  Consumer
