@@ -1,5 +1,6 @@
 # Communication
 
+
 ### Git Flow
 * Create new branch for each issue
 * Commit often with clear commit messages
