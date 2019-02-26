@@ -35,6 +35,7 @@ const Layout = ({ children }) => (
           </div>
           <Nav className="nav"/>
         </div>
+        {/* <Mongo/> */}
         <Footer />
       </LoginContext>
     )}

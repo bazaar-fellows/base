@@ -24,8 +24,8 @@ import './layout.scss';
 // )
 
 const Nav = props => {
-    const swapi = props.data;
-    console.log('swapi', swapi);
+    const store = props.data;
+    console.log('swapi', store);
 
     const clickedThing = (person) =>{
       console.log(person.name);
@@ -34,8 +34,8 @@ const Nav = props => {
     return (
         <>
         <nav>
-        {props.data.swapi.allPersons.map(person=>(
-            <div onClick={()=>clickedThing(person)}>{person.name}</div>
+        {props.data.shop.getAllCategories.map(item=>(
+            <div onClick={()=>clickedThing(item.name)}>{item.name}</div>
         ))}
         </nav>
       </>
@@ -45,17 +45,14 @@ const Nav = props => {
   export default props => (
     <StaticQuery
       query={graphql`
-        query SwapiQuery {
-          swapi{
-              allPersons{
-              name
-              id
-              films{
-                title 
-              }
-            }
-          }    
+      query{
+        shop{
+          getAllCategories{
+            name
+          }
         }
+      }    
+           
       `}
       render={data => <Nav data={data} />}
     />
