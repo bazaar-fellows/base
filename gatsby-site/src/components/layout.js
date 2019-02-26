@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby";
+import LoginContext from "../auth/context";
 
 import Header from "./header"
 import Footer from './footer'
@@ -18,7 +19,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <LoginContext>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -31,7 +32,7 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </div>
         <Footer />
-      </>
+      </LoginContext>
     )}
   />
 )

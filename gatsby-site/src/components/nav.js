@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import Auth from '../auth/auth';
 
 
 const Nav = () => (
@@ -20,6 +21,12 @@ const Nav = () => (
             >   
                 <Link to="/products/">Shop All</Link>
             </li>
+
+            <Auth capability="create">
+                <li>
+                    <Link to="/addProduct/">Add Product</Link>
+                </li>
+            </Auth>
         </ul>
     </nav>
 )
