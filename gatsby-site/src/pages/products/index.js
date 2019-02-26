@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import List from '../../components/list';
 import Auth from '../../auth/auth';
+import './products.scss';
 
 
 import Layout from "../../components/layout"
@@ -22,15 +23,14 @@ const Products = (props) => {
       <Layout>
         <SEO title="Products" />
         <h1>Products</h1>
-        <Link to="/">Go back to the homepage</Link>
         <List items={products} />
 
         <Auth capibility="update">
-          <button onSubmit={editItem}>Edit Product</button>
+          <button className='editButton' onSubmit={editItem}>Edit Product</button>
         </Auth>
 
         <Auth capibility="delete">
-          <button onSubmit={deleteItem}>Delete Product</button>
+          <button className='deleteButton' onSubmit={deleteItem}>Delete Product</button>
         </Auth>
       </Layout>
     )
