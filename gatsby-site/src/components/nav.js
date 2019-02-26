@@ -1,25 +1,23 @@
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import Auth from '../auth/auth';
+import './nav.scss';
 
 
 const Nav = () => (
     <nav>
-        <ul style={{
-            listStyleType: `none`,
-            color: `white`,
-            margin: `0`,
-            padding: `0`,
-            }}
-        >
-            <li style={{
-            paddingLeft: `10px`,
-            float: `left`,
-            textDecoration: `none`,
-            display: `block`,
-            }}
-            >   
-                <Link to="/products/">Shop All</Link>
+        <ul>
+            <li>   
+                <Link to="/products/">SHOP ALL</Link>
             </li>
+
+            <li>|</li>
+
+            <Auth capability="create">
+                <li>
+                    <Link to="/addProduct/">ADD PRODUCT</Link>
+                </li>
+            </Auth>
         </ul>
     </nav>
 )
