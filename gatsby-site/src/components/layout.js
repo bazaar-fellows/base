@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby"
+import Nav from "./nav.js";
+
 import LoginContext from "../auth/context";
 import './layout.scss';
 
@@ -24,11 +26,14 @@ const Layout = ({ children }) => (
         <div>
           <main>{children}</main>
         </div>
+        <Nav />
         <Footer />
       </LoginContext>
     )}
   />
 )
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
