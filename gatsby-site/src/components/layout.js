@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+import Nav from "./nav.js";
 import Header from "./header"
 import Footer from './footer'
 import "./layout.css"
@@ -30,11 +30,14 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
         </div>
+        <Nav />
         <Footer />
       </>
     )}
   />
 )
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
