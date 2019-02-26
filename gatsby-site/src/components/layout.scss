@@ -13,4 +13,30 @@ body{
       font-family: 'Oswald', sans-serif;
     }
   }
+
+  nav{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+
+  .contentContainer{
+    display: flex;
+    flex-direction: row;
+
+    nav{
+      background-color: rgb(205, 222, 179);
+      order: 1;
+      margin-top: 1em;
+    }
+
+    .deck{
+      order: 2;
+      margin: 2em;
+    }
+   
+  }
+
 }
+
+
