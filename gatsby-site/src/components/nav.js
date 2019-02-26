@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { StaticQuery, graphql } from 'gatsby';
 import Auth from '../auth/auth';
 import './nav.scss';
-
+import './layout.scss';
 
 // const Nav = () => (
 //     <nav>
@@ -26,12 +26,18 @@ import './nav.scss';
 const Nav = props => {
     const swapi = props.data;
     console.log('swapi', swapi);
+
+    const clickedThing = (person) =>{
+      console.log(person.name);
+    }
+
     return (
         <>
+        <nav>
         {props.data.swapi.allPersons.map(person=>(
-            <div>{person.name}</div>
+            <div onClick={()=>clickedThing(person)}>{person.name}</div>
         ))}
-      <div> Hello from swapi component </div>
+        </nav>
       </>
     );
   };
@@ -40,16 +46,15 @@ const Nav = props => {
     <StaticQuery
       query={graphql`
         query SwapiQuery {
-            swapi{
-                allPersons{
-                name
-                id
-                films{
-                    title 
-                }
-                }
+          swapi{
+              allPersons{
+              name
+              id
+              films{
+                title 
+              }
             }
-              
+          }    
         }
       `}
       render={data => <Nav data={data} />}
