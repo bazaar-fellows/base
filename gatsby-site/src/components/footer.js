@@ -6,8 +6,9 @@ import './footer.scss';
 const Footer = ({ siteTitle }) => (
     <footer>
 
+
       <div>
-        <h1 style={{ margin: 0 }}>
+        <h1>
           <Link
             to="/"
             >
