@@ -1,0 +1,31 @@
+@import './design/_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+header{
+  background: $background;
+  color: $textColor;
+  clear:both;
+
+  div{
+
+    .cart{
+      color: $textColor;
+      float:right;
+      font-size: .8em;
+      padding-right: 1em;
+      padding-top: .5em;
+      text-decoration: none;
+    }
+
+    h1{
+      font-family: 'Oswald', sans-serif;
+      padding-bottom: 1em;
+      text-align:center;
+
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
