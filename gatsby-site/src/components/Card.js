@@ -22,14 +22,21 @@ export class Card extends Component {
     this.setState({ modalVisible: visible });
   }
 
-  editItem = () => {
-    //edit the item
-  }
+  // editItem = (id) => {
+  //   //edit the item
+  // }
   
-  deleteItem = () => {
-    //delete the item
+  // deleteItem = (id) => {
+  //   let newProducts = [];
+  //   console.log('my props content', this.props.content);
+  //   for (let product in this.props){
+  //     if(product.content[id] !== id){
+  //       newProducts.push(product.content);
+  //     }
+  //   }
   
-  }
+  //   this.props.updateProducts(newProducts);
+  // }
 
 
   render() {
@@ -49,13 +56,13 @@ export class Card extends Component {
           <img src={this.props.content.image} style={{ width: "500px", height: '500px' }} />
           <div>{this.props.content.description}</div>
           <div>{this.props.content.price}</div>
-          <Auth capibility="update">
+          {/* <Auth capibility="update">
             <button className='editButton' onSubmit={this.editItem(this.props.content.id)}>Edit Product</button>
           </Auth>
 
           <Auth capibility="delete">
             <button className='deleteButton' onSubmit={this.deleteItem(this.props.content.id)}>Delete Product</button>
-          </Auth>
+          </Auth> */}
           <button>Add To Cart</button>
           <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>CLOSE!</button>
         </Modal>
