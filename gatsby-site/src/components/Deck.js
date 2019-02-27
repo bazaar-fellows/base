@@ -42,11 +42,11 @@ class Deck extends Component {
     return (
         <>
         <div className="contentContainer">
-        <div>
+        <section className="categoryList">
         {this.props.allCategories.map(category=>(
             <div key={category._id} onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
         ))}
-        </div>
+        </section>
         <div className="card-deck">
         <If condition={this.state.categoryId}>
             <Then>

@@ -65,7 +65,7 @@ export class Card extends Component {
           <Auth capibility="delete">
             <button className='deleteButton' onSubmit={this.deleteItem(this.props.content.id)}>Delete Product</button>
           </Auth> */}
-          <button>Add To Cart</button>
+          {/* <button onClick = {()=>this.addToCart(this.props.content.name, this.props.content._id)}>Add To Cart</button> */}
           <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>CLOSE!</button>
         </Modal>
       </div>
