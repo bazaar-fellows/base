@@ -4,7 +4,11 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import './loginPage.scss';
 
+import { Provider } from "react-redux";
+import {store} from './index'
+
 const IndexPage = () => (
+  <Provider store = {store}>
   <Layout>
       <SEO title="LogIn" keywords={[`gatsby`, `application`, `react`]} />
       <div className="login">
@@ -12,6 +16,8 @@ const IndexPage = () => (
         <LogInForm/>
       </div>
   </Layout>
+  </Provider>
+
 )
 
 export default IndexPage
