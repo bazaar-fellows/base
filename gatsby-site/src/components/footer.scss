@@ -1,0 +1,22 @@
+@import './design/_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+footer{
+  background-color: $background;
+  height: 4em;
+  line-height: 4em;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  border-top: 2px double lightgray;
+  border-bottom: 2px double lightgray;
+  font-family: 'Raleway', sans-serif;
+  font-size: .5em;
+  width: 100%;
+  
+  a{
+    color: $textColor;
+    text-decoration: none;
+  }
+}

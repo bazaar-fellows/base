@@ -64,3 +64,21 @@ class Nav extends React.Component {
 
 
 
+
+// const Nav = () => (
+//     <nav>
+//         <ul>
+//             <li>
+//                 <Link to="/products/">SHOP ALL</Link>
+//             </li>
+
+//             <li>|</li>
+
+//             <Auth capability="create">
+//                 <li>
+//                     <Link to="/addProduct/">ADD PRODUCT</Link>
+//                 </li>
+//             </Auth>
+//         </ul>
+//     </nav>
+// )
