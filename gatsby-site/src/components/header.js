@@ -1,13 +1,17 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import CartNum from './cart-num';
 import './header.scss';
 
 const Header = ({ siteTitle }) => (
   <header>
     <div>
-      <Link className="cart" to='/cart'><span>🛒</span>cart</Link>
+      
+
+      <Link className="cart" to='/cart'><span>🛒</span>cart
+      <CartNum/>
+      </Link>
     </div>
     <div>
       <h1 style={{ margin: 0 }}>

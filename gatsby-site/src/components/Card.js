@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Auth from '../auth/auth';
+import {connect} from 'react-redux';
+import * as actions from '../redux/actions.js';
+
 
 const customStyles = {
   content: {
@@ -37,6 +40,9 @@ export class Card extends Component {
   
   //   this.props.updateProducts(newProducts);
   // }
+  addToCart = (id, name, price, description) =>{
+    this.props.updateCart(id, name, price, description);
+  }
 
 
   render() {
@@ -65,7 +71,12 @@ export class Card extends Component {
           <Auth capibility="delete">
             <button className='deleteButton' onSubmit={this.deleteItem(this.props.content.id)}>Delete Product</button>
           </Auth> */}
-          <button>Add To Cart</button>
+          <button onClick={() => this.addToCart(
+            this.props.content._id,
+            this.props.content.name,
+            this.props.content.price,
+            this.props.content.description)
+            }>Add To Cart</button>
           <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>CLOSE!</button>
         </Modal>
       </div>
@@ -73,4 +84,17 @@ export class Card extends Component {
   }
 }
 
-export default Card
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = (dispatch, getState) => ({
+  updateCart: (id, name, price, description) => dispatch(actions.updateCart(id, name, price, description)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Card);
+
+
+// export default Card

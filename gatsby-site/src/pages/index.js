@@ -10,10 +10,15 @@ import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo";
 
+import { Provider } from "react-redux";
+import createStore from "../store/index.js"
+export const store = createStore();
+
 
 const IndexPage = () => (
   <>
   {/* <Nav className="nav" /> */}
+  <Provider store = {store}>
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h3>Featured Products</h3>
@@ -38,6 +43,7 @@ const IndexPage = () => (
       <div className="counter" count="3"> / 3</div>
     </div>
   </Layout>
+  </Provider>
   </>
 )
 
