@@ -5,7 +5,7 @@ import List from '../../components/list';
 import Auth from '../../auth/auth';
 import './products.scss';
 import Deck from '../../components/Deck';
-
+import ProductQuery from '../../components/product-query'
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -26,8 +26,8 @@ const Products = (props) => {
       <SEO title="Products" />
       <h1>Products</h1>
       {/* <List items={products} /> */}
-      <Deck />
-
+      {/* <Deck /> */}
+      <ProductQuery/>
       <Auth capibility="update">
         <button className='editButton' onSubmit={editItem}>Edit Product</button>
       </Auth>

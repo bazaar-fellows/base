@@ -30,6 +30,11 @@ body{
       margin-top: 1em;
     }
 
+    .card-deck{
+      display: flex;
+      flex-direction: row;
+    }
+
     .deck{
       order: 2;
       margin: 2em;
