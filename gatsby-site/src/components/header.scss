@@ -6,6 +6,7 @@ header{
   color: $textColor;
   clear:both;
   padding-top: 1em;
+  border-bottom: 2px double lightgray;
 
   div{
 
@@ -21,8 +22,8 @@ header{
     h1{
       font-family: 'Oswald', sans-serif;
       padding-bottom: 1em;
-      padding-left: 2em;
       text-align:center;
+      padding-left: 2em;
 
       a {
         color: $textColor;
