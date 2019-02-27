@@ -6,6 +6,8 @@ import { If, Then, Else } from './conditional';
 import './starter-card.scss';
 import './layout.scss';
 import Card from './Card.js';
+import './dropdown.css';
+import './deck.scss';
 
 
 class Deck extends Component {
@@ -28,7 +30,7 @@ class Deck extends Component {
        }
     
     filterProducts = (products) => {
-        console.log('product category id', products[0].category._id, 'state id', this.state.categoryId);
+        // console.log('product category id', products[0].category._id, 'state id', this.state.categoryId);
         let filteredProducts = products.filter(product=>{
             return product.category._id === this.state.categoryId;
         });
@@ -41,11 +43,14 @@ class Deck extends Component {
 
     return (
         <>
-        <div className="contentContainer">
         <div>
-        {this.props.allCategories.map(category=>(
-            <div key={category._id} onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
-        ))}
+        <div className="dropdown">
+          <button className="dropbtn">Categories</button>
+          <div className="dropdown-content">
+          {this.props.allCategories.map(category=>(
+              <a key={category._id} onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</a>
+          ))}
+          </div>
         </div>
         <div className="card-deck">
         <If condition={this.state.categoryId}>
@@ -57,7 +62,9 @@ class Deck extends Component {
                 </section>
             </Then>
             <Else>
-                <div>Featured Product Goes Here.</div>
+                <div className="imgContainer">
+                  <img className="featuredImage" src="https://images.unsplash.com/photo-1522273400909-fd1a8f77637e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2200&q=80" />
+                </div>
             </Else>
 
         </If>

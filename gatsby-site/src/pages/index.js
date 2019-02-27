@@ -2,12 +2,11 @@ import React from "react"
 
 import './carsoul.scss';
 import './index.scss';
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo";
 
 import { Provider } from "react-redux";
@@ -17,11 +16,11 @@ export const store = createStore();
 
 const IndexPage = () => (
   <>
-  {/* <Nav className="nav" /> */}
+
   <Provider store = {store}>
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h3>Featured Products</h3>
+    <h3><Link to="/products">Shop Products</Link></h3>
     <div classNameName='carsoul'>
 
       <input type="checkbox" className="faux-ui-facia" />
