@@ -12,38 +12,23 @@ import UpdateCategory from './update-category.js';
 
 
 class Nav extends React.Component {
-  constructor(props){
-    super(props);
-      this.state={
-        categoryName: '',
-        categoryId: '',
-        productsRendered: false
-    }
-  }
-
-  clickCategory = (name, id) => {
-
-    
-    this.setState({categoryName: name});
-    this.setState({categoryId: id});
-    console.log('STATE from nav', this.state)
-   }
 
     render(){
       return (
 
       <>
         <nav>
-          {this.props.data.shop.getAllCategories.map( category => (
+          {/* {this.props.data.shop.getAllCategories.map( category => (
             <div key={category._id} 
             onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
-          ))}
+          ))} */}
         {/* {this.props.data.shop.getAllCategories.map(category=>(
-            <div onClick={()=>this.selectedCategory(category.name, category._id)}>{category.name}</div>
+            <div onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
         ))} */}
         </nav>
-        <UpdateCategory categoryName={this.state.categoryName} 
-        categoryId={this.state.categoryId}/>
+        <UpdateCategory allProducts={this.props.data.shop.getAllProducts}
+        allCategories={this.props.data.shop.getAllCategories}  
+        />
       </>
     );
     }
@@ -59,9 +44,20 @@ class Nav extends React.Component {
             name
             _id
           }
+          getAllProducts{
+          name
+          description
+          price
+          qty
+          _id
+          category{
+          name
+          _id
         }
-      }     
-      `}
+      } 
+    }
+  }   
+`}
       render={data => <Nav data={data} />}
     />
   )
