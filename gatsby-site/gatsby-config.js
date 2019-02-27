@@ -47,7 +47,8 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "shop",
         // URL to query from
-        url: "http://localhost:3000/graphql",
+        // url: "http://localhost:3000/graphql",
+        url: "https://bazaarapi.herokuapp.com/graphql"
       },
     },
 

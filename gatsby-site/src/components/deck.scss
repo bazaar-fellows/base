@@ -1,0 +1,26 @@
+@import './design/_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.card-deck{
+
+  .deck{
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .imgContainer{
+    width: 100%;
+
+    .featuredImage {
+      box-shadow: 5px;
+      display: block;
+      max-width: 800px;
+      text-align: center;
+      margin: auto;
+      padding-top: 2em;
+    }
+  }
+}
