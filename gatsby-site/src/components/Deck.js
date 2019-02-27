@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import {graphql, StaticQuery} from 'gatsby'
 // import { connect } from "react-redux";
@@ -69,43 +70,5 @@ class Deck extends Component {
 }
 
 
-// export default (props) => (
-//     <StaticQuery
-//       query={graphql`
-//       query{
-//         shop{
-//           getAllProducts{
-//             name
-//             _id
-//             category{
-//                 name
-//               }
-//           }
-//         }
-//       }     
-//       `}
-//       render={data => <UpdateCategory data={data} />}
-//     />
-//   )
-
 
 export default Deck;
-
-
-
-
-
-
-//   const mapStateToProps = state => ({
-//     data: state.data
-//   });
-  
-//   const mapDispatchToProps = (dispatch, getState) => ({
-//     getCategory: (category, id) => dispatch(actions.getCategory(category, id)),
-//   });
-  
-//   export default connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-//   )(UpdateCategory);
-  

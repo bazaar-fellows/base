@@ -10,14 +10,6 @@ import ProductQuery from '../../components/product-query'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-function editItem() {
-  //edit the item
-}
-
-function deleteItem() {
-  //delete the item
-
-}
 
 const Products = (props) => {
   // const products = props.data.allMarkdownRemark.edges;
@@ -35,6 +27,7 @@ const Products = (props) => {
       <Auth capibility="delete">
         <button className='deleteButton' onSubmit={deleteItem}>Delete Product</button>
       </Auth>
+
     </Layout>
   )
 }
