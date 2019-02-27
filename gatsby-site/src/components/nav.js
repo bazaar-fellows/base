@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticQuery, graphql } from 'gatsby';
-import Auth from '../auth/auth';
+// import Auth from '../auth/auth';
 import './nav.scss';
 import './layout.scss';
 
@@ -24,27 +24,30 @@ import './layout.scss';
 // )
 
 const Nav = props => {
-   const store = props.data;
-   console.log('swapi', store);
+  // const store = props.data;
+  // console.log('swapi', store);
 
-   const clickedThing = (person) =>{
-     console.log(person.name);
-   }
+  const clickedThing = (person) => {
+    console.log(person.name);
+  }
 
-   return (
-       <>
-       <nav>
-       {props.data.shop.getAllCategories.map(item=>(
-           <div onClick={()=>clickedThing(item.name)}>{item.name}</div>
-       ))}
-       </nav>
-     </>
-   );
- };
+  return (
+    <>
+      <nav>
+        <Link className="products" to='/products'>products</Link>
+      </nav>
+      <nav>
+        {props.data.shop.getAllCategories.map((item, i) => (
+          <div key={i} onClick={() => clickedThing(item.name)}>{item.name}</div>
+        ))}
+      </nav>
+    </>
+  );
+};
 
- export default props => (
-   <StaticQuery
-     query={graphql`
+export default props => (
+  <StaticQuery
+    query={graphql`
      query{
        shop{
          getAllCategories{
@@ -54,6 +57,6 @@ const Nav = props => {
      }
 
      `}
-     render={data => <Nav data={data} />}
-   />
- );
+    render={data => <Nav data={data} />}
+  />
+);
