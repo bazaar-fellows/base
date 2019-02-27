@@ -1,3 +1,5 @@
+import './carsoul.scss';
+
 import React from "react"
 // import { Link } from "gatsby"
 import img1 from '../images/img1.jpg';
@@ -6,10 +8,18 @@ import img3 from '../images/img3.jpg';
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo";
+
+import { Provider } from "react-redux";
+import createStore from "../store/index.js"
+const store = createStore();
+
+
 import './carsoul.scss';
 import './index.scss';
 
 const IndexPage = () => (
+  <Provider store={store}>
+
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h3>Featured Products</h3>
@@ -34,6 +44,8 @@ const IndexPage = () => (
       <div class="counter" count="3"> / 3</div>
     </div>
   </Layout>
+  </Provider>
+
 )
 
 export default IndexPage
