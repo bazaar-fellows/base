@@ -8,7 +8,7 @@ import './layout.scss';
 // const Nav = () => (
 //     <nav>
 //         <ul>
-//             <li>   
+//             <li>
 //                 <Link to="/products/">SHOP ALL</Link>
 //             </li>
 
@@ -24,37 +24,36 @@ import './layout.scss';
 // )
 
 const Nav = props => {
-    const store = props.data;
-    console.log('swapi', store);
+   const store = props.data;
+   console.log('swapi', store);
 
-    const clickedThing = (person) =>{
-      console.log(person.name);
-    }
+   const clickedThing = (person) =>{
+     console.log(person.name);
+   }
 
-    return (
-        <>
-        <nav>
-        {props.data.shop.getAllCategories.map(item=>(
-            <div onClick={()=>clickedThing(item.name)}>{item.name}</div>
-        ))}
-        </nav>
-      </>
-    );
-  };
-  
-  export default props => (
-    <StaticQuery
-      query={graphql`
-      query{
-        shop{
-          getAllCategories{
-            name
-          }
-        }
-      }    
-           
-      `}
-      render={data => <Nav data={data} />}
-    />
-  );
+   return (
+       <>
+       <nav>
+       {props.data.shop.getAllCategories.map(item=>(
+           <div onClick={()=>clickedThing(item.name)}>{item.name}</div>
+       ))}
+       </nav>
+     </>
+   );
+ };
 
+ export default props => (
+   <StaticQuery
+     query={graphql`
+     query{
+       shop{
+         getAllCategories{
+           name
+         }
+       }
+     }
+
+     `}
+     render={data => <Nav data={data} />}
+   />
+ );

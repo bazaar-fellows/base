@@ -7,11 +7,11 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo";
 import './carsoul.scss';
+import './index.scss';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Your shop name here</h1>
     <h3>Featured Products</h3>
     <div className='carsoul'>
 
