@@ -40,10 +40,12 @@ export class Card extends Component {
 
 
   render() {
+    console.log('hello from CARDSSSS', this.props);
     return (
       <div>
         <div>{this.props.content.name}</div>
         <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
+        <div>{this.props.content.description}</div>
 
 
         <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>Learn More</button>

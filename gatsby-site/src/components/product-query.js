@@ -8,25 +8,16 @@ import Auth from '../auth/auth';
 import './nav.scss';
 import './layout.scss';
 
-import UpdateCategory from './update-category.js';
+import Deck from './Deck.js';
 
 
-class Nav extends React.Component {
+class ProductQuery extends React.Component {
 
     render(){
+      console.log('stuff from nav', this.props.data);
       return (
-
       <>
-        <nav>
-          {/* {this.props.data.shop.getAllCategories.map( category => (
-            <div key={category._id} 
-            onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
-          ))} */}
-        {/* {this.props.data.shop.getAllCategories.map(category=>(
-            <div onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
-        ))} */}
-        </nav>
-        <UpdateCategory allProducts={this.props.data.shop.getAllProducts}
+        <Deck allProducts={this.props.data.shop.getAllProducts}
         allCategories={this.props.data.shop.getAllCategories}  
         />
       </>
@@ -58,7 +49,7 @@ class Nav extends React.Component {
     }
   }   
 `}
-      render={data => <Nav data={data} />}
+    render={data => <ProductQuery data={data} />}
     />
   )
 
