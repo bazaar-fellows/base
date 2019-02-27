@@ -20,13 +20,6 @@ const Products = (props) => {
       {/* <List items={products} /> */}
       {/* <Deck /> */}
       <ProductQuery/>
-      <Auth capibility="update">
-        <button className='editButton' onSubmit={editItem}>Edit Product</button>
-      </Auth>
-
-      <Auth capibility="delete">
-        <button className='deleteButton' onSubmit={deleteItem}>Delete Product</button>
-      </Auth>
 
     </Layout>
   )
