@@ -1,14 +1,15 @@
 let initialState = {
-    category: ''
+    cart: []
   };
 
   export default (state = initialState, action) => {
     let { type, payload} = action;
   
     switch (type) {
-      case "GETCATEGORY":
-        console.log('payload from reucer !!!', payload);
-        return {...state, category: payload.name};
+      case "UPDATECART":
+        let newState = {...state, cart: [...state.cart, payload]};
+        console.log('new state', newState);
+        return newState;
   
       default:
         return state;

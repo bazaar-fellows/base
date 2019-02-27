@@ -11,9 +11,18 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 
+
+import { Provider } from "react-redux";
+// import createStore from "../../store/index.js"
+// export const store = createStore();
+import {store} from "../index.js";
+
+
 const Products = (props) => {
   // const products = props.data.allMarkdownRemark.edges;
   return (
+    <Provider store = {store}>
+
     <Layout>
       <SEO title="Products" />
       <h1>Products</h1>
@@ -22,6 +31,7 @@ const Products = (props) => {
       <ProductQuery/>
 
     </Layout>
+    </Provider>
   )
 }
 
