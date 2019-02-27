@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import Nav from "./nav.js";
 
 import LoginContext from "../auth/context";
 import './layout.scss';
@@ -24,12 +23,10 @@ const Layout = ({ children }) => (
     render={data => (
       <LoginContext>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Nav className="nav" />
+
         <div className={"contentContainer"}>
           <main>{children}</main>
           {/* <Deck /> */}
-
-
         </div>
         {/* <Mongo/> */}
 

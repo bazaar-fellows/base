@@ -7,7 +7,7 @@ import './header.scss';
 const Header = ({ siteTitle }) => (
   <header>
     <div>
-      <Link className="cart" to='/cart'>cart</Link>
+      <Link className="cart" to='/cart'><span>🛒</span>cart</Link>
     </div>
     <div>
       <h1 style={{ margin: 0 }}>
