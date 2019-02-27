@@ -1,60 +1,70 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticQuery, graphql } from 'gatsby';
+
+//adding connect to the reduct store
+
 import Auth from '../auth/auth';
 import './nav.scss';
 import './layout.scss';
 
-// const Nav = () => (
-//     <nav>
-//         <ul>
-//             <li>   
-//                 <Link to="/products/">SHOP ALL</Link>
-//             </li>
+import UpdateCategory from './update-category.js';
 
-//             <li>|</li>
 
-//             <Auth capability="create">
-//                 <li>
-//                     <Link to="/addProduct/">ADD PRODUCT</Link>
-//                 </li>
-//             </Auth>
-//         </ul>
-//     </nav>
-// )
-
-const Nav = props => {
-    const store = props.data;
-    console.log('swapi', store);
-
-    const clickedThing = (person) =>{
-      console.log(person.name);
+class Nav extends React.Component {
+  constructor(props){
+    super(props);
+      this.state={
+        categoryName: '',
+        categoryId: '',
+        productsRendered: false
     }
+  }
 
-    return (
-        <>
+  clickCategory = (name, id) => {
+
+    
+    this.setState({categoryName: name});
+    this.setState({categoryId: id});
+    console.log('STATE from nav', this.state)
+   }
+
+    render(){
+      return (
+
+      <>
         <nav>
-        {props.data.shop.getAllCategories.map(item=>(
-            <div onClick={()=>clickedThing(item.name)}>{item.name}</div>
-        ))}
+          {this.props.data.shop.getAllCategories.map( category => (
+            <div key={category._id} 
+            onClick={()=>this.clickCategory(category.name, category._id)}>{category.name}</div>
+          ))}
+        {/* {this.props.data.shop.getAllCategories.map(category=>(
+            <div onClick={()=>this.selectedCategory(category.name, category._id)}>{category.name}</div>
+        ))} */}
         </nav>
+        <UpdateCategory categoryName={this.state.categoryName} 
+        categoryId={this.state.categoryId}/>
       </>
     );
+    }
   };
   
-  export default props => (
+
+  export default (props) => (
     <StaticQuery
       query={graphql`
       query{
         shop{
           getAllCategories{
             name
+            _id
           }
         }
-      }    
-           
+      }     
       `}
       render={data => <Nav data={data} />}
     />
-  );
+  )
+
+
 
