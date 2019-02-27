@@ -7,7 +7,8 @@ import LoginContext from "../auth/context";
 import './layout.scss';
 import Header from "./header"
 import Footer from './footer'
-import { DH_CHECK_P_NOT_PRIME } from "constants";
+// import { DH_CHECK_P_NOT_PRIME } from "constants";
+import Deck from "./Deck";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,19 +24,15 @@ const Layout = ({ children }) => (
     render={data => (
       <LoginContext>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <Nav className="nav" />
         <div className={"contentContainer"}>
-          {/* <main>{children}</main> */}
-          {/* include the deck component here */}
-                    {/* deck component with render the list of cards */}
+          <main>{children}</main>
+          {/* <Deck /> */}
 
-          <div className={"deck"}>
-            <h2>My Product</h2>
-            <p> This my product </p>
-            <a> Click here to see more about the product</a>
-          </div>
-          <Nav className="nav"/>
+
         </div>
         {/* <Mongo/> */}
+
         <Footer />
       </LoginContext>
     )}
