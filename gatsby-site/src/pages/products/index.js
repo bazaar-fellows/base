@@ -10,14 +10,6 @@ import Deck from '../../components/Deck';
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-function editItem() {
-  //edit the item
-}
-
-function deleteItem() {
-  //delete the item
-
-}
 
 const Products = (props) => {
   // const products = props.data.allMarkdownRemark.edges;
@@ -27,14 +19,6 @@ const Products = (props) => {
       <h1>Products</h1>
       {/* <List items={products} /> */}
       <Deck />
-
-      <Auth capibility="update">
-        <button className='editButton' onSubmit={editItem}>Edit Product</button>
-      </Auth>
-
-      <Auth capibility="delete">
-        <button className='deleteButton' onSubmit={deleteItem}>Delete Product</button>
-      </Auth>
     </Layout>
   )
 }

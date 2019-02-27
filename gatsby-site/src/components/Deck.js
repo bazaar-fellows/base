@@ -22,12 +22,17 @@ export class Deck extends Component {
       },
     ]
   }
+
+  updateProducts(products){
+    this.setState({products:products})
+  }
+
   render() {
     return (
       <div>
         <section className="deck">
           {this.state.products.map((card, i) => (
-            <Card key={i} content={card} />
+            <Card key={i} content={card} updateProducts={this.updateProducts} />
           ))}
         </section>
       </div>
