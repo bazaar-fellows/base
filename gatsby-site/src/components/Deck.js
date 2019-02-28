@@ -20,7 +20,7 @@ class Deck extends Component {
             condition: false
         }
       }
-       
+       //bug fix
       clickCategory = (name, id) => {
         let filteredProducts = this.props.allProducts.filter(product=>{
          return product.category._id === id;
