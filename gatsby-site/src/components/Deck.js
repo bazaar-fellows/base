@@ -21,19 +21,6 @@ class Deck extends Component {
             condition: false
         }
       }
-<<<<<<< HEAD
-       //bug fix
-      clickCategory = (name, id) => {
-        let filteredProducts = this.props.allProducts.filter(product=>{
-         return product.category._id === id;
-        });
-        this.setState({products: filteredProducts, categoryId: id, categoryName: name, condition: true});
-         }
-    
-
-  render() {
-  
-=======
 
     //bug fix
     clickCategory = (name, id) => {
@@ -47,7 +34,6 @@ class Deck extends Component {
     let categoryName = this.state.categoryName ? this.state.categoryName : '';
     let categoryId = this.state.categoryId ? this.state.categoryId : '';
 
->>>>>>> fa3e698572e2b6cb3092bcb0a978f078ea86fb49
     return (
         <>
         <div>
