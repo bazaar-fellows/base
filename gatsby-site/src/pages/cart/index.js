@@ -9,12 +9,11 @@ import '../../components/view-cart.scss'
 
 class Cart extends Component {
   render() {
-    console.log('the items in cart :)');
     return (
       <Provider store={store}>
         <div className='main-cart-container'>
           <ViewCart />
-          <PayPalBtn total={50} />
+      
         </div>
       </Provider>
     )

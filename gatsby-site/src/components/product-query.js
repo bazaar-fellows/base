@@ -14,7 +14,6 @@ import Deck from './Deck.js';
 class ProductQuery extends React.Component {
 
     render(){
-      console.log('stuff from nav', this.props.data);
       return (
       <>
         <Deck allProducts={this.props.data.shop.getAllProducts}
