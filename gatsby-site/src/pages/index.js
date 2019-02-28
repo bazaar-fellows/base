@@ -1,5 +1,4 @@
 import React from "react"
-import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 

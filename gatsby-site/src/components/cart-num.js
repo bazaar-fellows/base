@@ -13,7 +13,7 @@ class CartNum extends Component {
   }
 }
 
-
+//hi
 const mapStateToProps = state => ({
   cart: state.data.cart
 });
