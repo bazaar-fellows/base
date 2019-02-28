@@ -1,12 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {connect} from 'react-redux';
 import CartNum from './cart-num';
 import './header.scss';
 import ColorThemeButton from './ColorThemeButton';
 
-const Header = ({ siteTitle }) => (
-    <header>
+const Header = ({ siteTitle }, props) => (
+    <header className={props.colorTheme}>
       <div>
         <Link className="cart" to='/cart'><span>🛒</span>cart
         <CartNum/>
@@ -33,4 +34,11 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+const mapStateToProps = state => ({
+  colorTheme: state.data.colorTheme
+});
+
+export default connect(
+  mapStateToProps,
+)(Header);
+

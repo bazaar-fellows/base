@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import { When, Unless } from '../components/conditional';
+import { When, Unless } from './conditional';
 import React, { Component } from 'react'
-import * as actions from '../redux/actions.js';
+import * as actions from '../redux/actions';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 import { Link } from "gatsby";
 
@@ -25,6 +25,10 @@ class ViewCart extends Component {
     console.log(' 💎 ', total);
     this.setState({total});
   }
+
+
+
+
 
 
   render() {

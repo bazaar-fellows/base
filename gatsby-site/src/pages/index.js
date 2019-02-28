@@ -5,7 +5,6 @@ import './index.scss';
 
 import Mutation from '../components/apollo/category-mutation.js';
 import DeleteMutation from '../components/apollo/category-delete-mutation.js';
-import Auth from '../auth/auth.js';
 
 import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
