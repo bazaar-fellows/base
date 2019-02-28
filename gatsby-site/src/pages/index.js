@@ -10,7 +10,7 @@ import Auth from '../auth/auth.js';
 
 import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
-import {ApolloProvider} from 'react-apollo';
+import { ApolloProvider } from 'react-apollo';
 import ApolloClient from "apollo-boost";
 import SubHeader from '../components/subHeader';
 import ColorThemeButton from '../components/colorThemeButton';
@@ -35,6 +35,7 @@ export const client = new ApolloClient({
 
 const IndexPage = () => (
   <>
+
   <ApolloProvider client={client}>
 
   {/* <Auth capibility="delete"> */}
