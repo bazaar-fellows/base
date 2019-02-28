@@ -7,7 +7,8 @@ import * as actions from '../redux/actions.js';
 import card from './card.scss';
 import gql from 'graphql-tag';
 
-import DeleteProduct from '../pages/apollo/delete-products.js';
+
+import DeleteProduct from '../components/apollo/delete-products.js';
 
 const customStyles = {
   content: {
@@ -45,10 +46,11 @@ export class Card extends Component {
 
 
   render() {
+    console.log('IMAGE URL 😍', this.props.content);
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
-        <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
+        <img src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
         <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 

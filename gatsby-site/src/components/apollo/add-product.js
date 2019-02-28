@@ -12,6 +12,7 @@ mutation PostMutation($name: String!, $description: String!, $price: Float!, $qt
       description
       price
       qty
+      
       category{
           name
           _id
@@ -28,13 +29,15 @@ class CreateLink extends Component {
             description: '',
             price: 0,
             qty: 0,
-            category: ''
+            category: '',
+            
         }
     }
  
 
   render() {
-    const { name, description, price, qty, category } = this.state
+    const { name, description, price, qty, category} = this.state
+    console.log('stuff from deck', this.props)
     return (
       <div>
         <div className="flex flex-column mt3">
@@ -66,15 +69,15 @@ class CreateLink extends Component {
             type="number" 
             placeholder="Quantity of product"
           />   
-            <input
+            {/* <input
             className="mb2"
-            value={category}
-            onChange={e => this.setState({ category: e.target.value })}
+            value={image_url}
+            onChange={e => this.setState({ image_url: e.target.value })}
             type="text" 
-            placeholder="Category of product"
-          /> 
+            placeholder="URL of image"
+          />  */}
         </div>
-        <Mutation mutation={POST_MUTATION} variables={{ name, description, price, qty, category }}>
+        <Mutation mutation={POST_MUTATION} variables={{ name, description, price, qty, category: this.props.categoryId }}>
         {postMutation => <button onClick={postMutation}>Submit</button>}
         </Mutation>
     </div>

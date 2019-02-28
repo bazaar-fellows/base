@@ -3,8 +3,10 @@ import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 
-import Mutation from './apollo/client';
-import DeleteMutation from './apollo/delete';
+import Mutation from '../components/apollo/category-mutation.js';
+import DeleteMutation from '../components/apollo/category-delete-mutation.js';
+import Auth from '../auth/auth.js';
+
 import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
 import {ApolloProvider} from 'react-apollo';
@@ -37,8 +39,12 @@ class IndexPage extends React.Component{
         <Provider store = {store}>
           <Layout>
 
-          <Mutation/>
-          <DeleteMutation/>
+           {/* <Auth capibility="delete"> */}
+            <p> Add category </p>
+            <Mutation/>
+            <p> delete category by id</p>
+            <DeleteMutation/>
+          {/* </Auth> */}
 
           <SubHeader />
           <ColorThemeButton />
