@@ -7,7 +7,6 @@ class LoginProvider extends React.Component {
   constructor(props) {
     super(props);
     const cookieToken = cookie.load("auth");
-    console.log('cookie Token ', cookieToken)
     const token = cookieToken || null;
     
     this.state = {
@@ -17,7 +16,6 @@ class LoginProvider extends React.Component {
       logout: this.logout
     };
 
-    //console.log('cookie token ', token);
   }
 
   setLoginState = loggedIn => {
@@ -36,7 +34,6 @@ class LoginProvider extends React.Component {
   };
 
   render() {
-    //console.log('cookie token ', cookieToken);
     return (
       <LoginContext.Provider value={this.state}>
         {this.props.children}

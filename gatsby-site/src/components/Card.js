@@ -3,11 +3,11 @@ import Modal from 'react-modal';
 import Auth from '../auth/auth';
 import { Mutation } from 'react-apollo'
 import {connect} from 'react-redux';
-import * as actions from '../redux/actions.js';
+import * as actions from '../redux/actions';
 import card from './card.scss';
 import gql from 'graphql-tag';
 
-import DeleteProduct from '../pages/apollo/delete-products.js';
+import DeleteProduct from '../pages/apollo/delete-products';
 
 const customStyles = {
   content: {

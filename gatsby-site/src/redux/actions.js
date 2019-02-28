@@ -8,7 +8,7 @@ export const updateCart = (id, name, price, description) => {
   };
 
 export const changeColorTheme = (color) => {
-  console.log('payload fromm actions ', color);
+  console.log('payload fromm actions -changing colors', color);
   return{
     type: "CHANGECOLORTHEME",
     payload: {color: color}
