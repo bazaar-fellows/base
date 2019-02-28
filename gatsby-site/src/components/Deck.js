@@ -1,7 +1,5 @@
 
 import React, { Component } from 'react'
-//import {graphql, StaticQuery} from 'gatsby'
-// import { connect } from "react-redux";
 import { If, Then, Else } from './conditional';
 import './starter-card.scss';
 import './layout.scss';
