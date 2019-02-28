@@ -17,11 +17,13 @@ import img3 from '../images/img3.jpg';
 import Layout from "../components/layout"
 import SEO from "../components/seo";
 import '../components/dropdown.css';
+import Background from "../components/background";
 import { Provider } from "react-redux";
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
 import createStore from "../store";
 export const store = createStore();
+
 
 
 export const client = new ApolloClient({
@@ -38,7 +40,7 @@ class IndexPage extends React.Component{
           <div className={this.props.colorTheme}>
             <Mutation/>
             <DeleteMutation/>
-
+            <Background />
             <SubHeader />
 
             <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

@@ -23,6 +23,21 @@ body{
     display: flex;
     flex-direction: row;
 
+    &.light{
+      background-color: $background;
+      color: $textColor;
+    }
+
+    &.dark{
+      background-color: $backgroundDark;
+      color: $textColorDark;
+    }
+
+    &.color{
+      background-color: $backgroundColor;
+      color: $textColorColor;
+    }
+
     nav{
       background-color: rgb(205, 222, 179);
       order: 1;

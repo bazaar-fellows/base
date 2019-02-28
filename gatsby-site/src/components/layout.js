@@ -22,6 +22,7 @@ const Layout = ({ children }, props) => (
       <LoginContext>
 
         <Header colorTheme={props.colorTheme} siteTitle={data.site.siteMetadata.title} />
+        {console.log('my props', props)}
         <div className="contentContainer" className={props.colorTheme}>
           <main>{children}</main>
         </div>

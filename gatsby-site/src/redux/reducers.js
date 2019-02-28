@@ -12,9 +12,7 @@ let initialState = {
         return newState;
       
       case "CHANGECOLORTHEME":
-        let newColorTheme = {...state, colorTheme: payload.color }
-        console.log('new state with newColorTheme', newColorTheme);
-        return newColorTheme;
+        return ({...state, colorTheme: payload.color})
   
       default:
         return state;
