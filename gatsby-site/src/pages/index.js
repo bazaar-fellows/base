@@ -1,8 +1,11 @@
 import React from "react"
-import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa3e698572e2b6cb3092bcb0a978f078ea86fb49
 import Mutation from '../components/apollo/category-mutation.js';
 import DeleteMutation from '../components/apollo/category-delete-mutation.js';
 
@@ -32,6 +35,10 @@ export const client = new ApolloClient({
   uri: "https://bazaarapi.herokuapp.com/graphql"
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa3e698572e2b6cb3092bcb0a978f078ea86fb49
 const IndexPage = () => (
   <>
   <ApolloProvider client={client}>
@@ -78,3 +85,7 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa3e698572e2b6cb3092bcb0a978f078ea86fb49

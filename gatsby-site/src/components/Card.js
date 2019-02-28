@@ -37,9 +37,8 @@ export class Card extends Component {
   deleteItem = (id) => {
     console.log('my props content❤️', this.props.content);
 
-  
-    //this.props.updateProducts(newProducts);
-  }
+    }
+
   addToCart = (id, name, price, description) =>{
     this.props.updateCart(id, name, price, description);
   }
@@ -99,6 +98,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Card);
-
-
-// export default Card

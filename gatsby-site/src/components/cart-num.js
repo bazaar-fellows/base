@@ -13,13 +13,14 @@ class CartNum extends Component {
   }
 }
 
-
+//hi
 const mapStateToProps = state => ({
   cart: state.data.cart
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+
 });
 
 export default connect(
