@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 import * as actions from '../redux/actions.js';
 import card from './card.scss';
 
-import DeleteProduct from '../pages/apollo/delete-products.js';
+
+import DeleteProduct from '../components/apollo/delete-products.js';
 
 const customStyles = {
   content: {
@@ -28,21 +29,6 @@ export class Card extends Component {
     this.setState({ modalVisible: visible });
   }
 
-  // editItem = (id) => {
-  //   //edit the item
-  // }
-  
-  // deleteItem = (id) => {
-  //   let newProducts = [];
-  //   console.log('my props content', this.props.content);
-  //   for (let product in this.props){
-  //     if(product.content[id] !== id){
-  //       newProducts.push(product.content);
-  //     }
-  //   }
-  
-  //   this.props.updateProducts(newProducts);
-  // }
   addToCart = (id, name, price, description) =>{
     this.props.updateCart(id, name, price, description);
   }
@@ -52,7 +38,7 @@ export class Card extends Component {
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
-        <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
+        <img src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
         <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 

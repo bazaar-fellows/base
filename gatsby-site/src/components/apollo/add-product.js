@@ -35,6 +35,7 @@ class CreateLink extends Component {
 
   render() {
     const { name, description, price, qty, category } = this.state
+    console.log('stuff from deck', this.props)
     return (
       <div>
         <div className="flex flex-column mt3">
@@ -66,15 +67,15 @@ class CreateLink extends Component {
             type="number" 
             placeholder="Quantity of product"
           />   
-            <input
+            {/* <input
             className="mb2"
             value={category}
             onChange={e => this.setState({ category: e.target.value })}
             type="text" 
             placeholder="Category of product"
-          /> 
+          />  */}
         </div>
-        <Mutation mutation={POST_MUTATION} variables={{ name, description, price, qty, category }}>
+        <Mutation mutation={POST_MUTATION} variables={{ name, description, price, qty, category: this.props.categoryId }}>
         {postMutation => <button onClick={postMutation}>Submit</button>}
         </Mutation>
     </div>

@@ -26,7 +26,11 @@ class ViewCart extends Component {
     console.log(' 💎 ', total);
     this.setState({total});
   }
+<<<<<<< HEAD
 ///////////////////////////// Render ///////////////////////
+=======
+
+>>>>>>> 3692464533a24b708baf5b27aad9a6bd230b4337
 
   render() {
     const onSuccess = (payment) => {
