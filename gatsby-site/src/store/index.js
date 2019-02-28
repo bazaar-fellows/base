@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 import APIreducer from "../redux/reducers.js";
 
 let reducers = combineReducers({
-  data: APIreducer
+  data: APIreducer,
 });
 
 const store = () =>

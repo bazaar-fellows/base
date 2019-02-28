@@ -27,16 +27,22 @@ class ViewCart extends Component {
     this.setState({total});
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ///////////////////////////// Render ///////////////////////
 =======
 
 >>>>>>> 3692464533a24b708baf5b27aad9a6bd230b4337
+=======
+///////////////////////////// Render ///////////////////////
+
+
+>>>>>>> 028156e30167f4742c3cc82c26eed176dce6e369
 
   render() {
     const onSuccess = (payment) => {
-      console.log("Payment succeeded!", payment);
+      console.log(' 🛒 ');
+      this.props.clearCart();
       this.setState({paymentSuccess: true});
-      
     }
 
     const onCancel = (data) => {
@@ -109,12 +115,15 @@ class ViewCart extends Component {
   }
 }
 
+
+
 const mapStateToProps = state => ({
   cart: state.data.cart
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+  clearCart: () => dispatch(actions.clearCart()),
 });
 
 export default connect(
