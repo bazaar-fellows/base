@@ -24,24 +24,24 @@ class IndexPage extends React.Component{
   }
 
   darkTheme = () => {
+    this.setState({ colorTheme: 'dark' })
     console.log('in the dark theme with state ', this.state.colorTheme);
-    this.setState=({ colorTheme: 'dark' })
   }
   
   lightTheme = () => {
-    this.setState=({ colorTheme: 'light' })
+    this.setState({ colorTheme: 'light' })
   }
   
   colorTheme = () => {
-    this.setState=({ colorTheme: 'color' })
+    this.setState({ colorTheme: 'color' })
   }
 
   render(){
     return(
-      <>
+      <body className={this.state.colorTheme}>
     
       <Provider store = {store}>
-      <Layout>
+      <Layout colorTheme={this.state.colorTheme}>
 
         <Auth capibility="update">
           <div class="dropdown">
@@ -79,7 +79,7 @@ class IndexPage extends React.Component{
     
       </Layout>
       </Provider>
-      </>
+      </body>
     )
   }
 }

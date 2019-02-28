@@ -2,32 +2,67 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-h3{
-
+body {
   &.light{
-  font-family: 'Oswald', sans-serif;
-  padding-bottom: 1em;
-  text-align:center;
-
-  a{
-    text-decoration: none;
+    background-color: $background;
     color: $textColor;
-  
-    &:hover {
-      color: $accentColor;
-    }
-  }
   }
 
   &.dark{
-  
-  a{
-    text-decoration: none;
+    background-color: $backgroundDark;
     color: $textColorDark;
-
-    &:hover {
-      color: $accentColor;
-    }
   }
+
+  &.color{
+    background-color: $backgroundColor;
+    color: $textColorColor;
+  }
+
+  h3{
+
+    &.light{
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 1em;
+    text-align:center;
+
+    a{
+      text-decoration: none;
+      color: $textColor;
+    
+      &:hover {
+        color: $accentColor;
+      }
+    }
+    }
+
+    &.dark{
+      font-family: 'Oswald', sans-serif;
+      padding-bottom: 1em;
+      text-align:center;
+    
+    a{
+      text-decoration: none;
+      color: $textColorDark;
+
+      &:hover {
+        color: $accentColorDark;
+      }
+    }
+    }
+    
+    &.color{
+      font-family: 'Oswald', sans-serif;
+      padding-bottom: 1em;
+      text-align:center;
+    
+      a{
+        text-decoration: none;
+        color: $textColorColor;
+    
+        &:hover {
+          color: $accentColorColor;
+        }
+      }
+      }
   }
 }

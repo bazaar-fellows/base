@@ -13,8 +13,7 @@
   }
 
   body{
-    background-color: $background;
-    //background-image: linear-gradient(#17191f,#252a35);
+    //background-color: $background;
     height: 100%;
 
     .carousel {
@@ -101,8 +100,6 @@
     }
 
     .faux-ui-facia {
-      // top: 0;
-      // right: 0;
       float: right;
       position: absolute;
       margin-top:0;
