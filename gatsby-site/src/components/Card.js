@@ -18,14 +18,6 @@ const customStyles = {
   }
 };
 
-// const DELETE_PRODUCT = gql`
-//   mutation{
-//     deleteProduct(_id: " product id "){
-//       name
-//     }
-//   }
-// `
-
 export class Card extends Component {
   state = {
     modalVisible: false,

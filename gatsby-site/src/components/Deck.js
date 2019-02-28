@@ -1,7 +1,5 @@
 
 import React, { Component } from 'react'
-import {graphql, StaticQuery} from 'gatsby'
-// import { connect } from "react-redux";
 import { If, Then, Else } from './conditional';
 import './starter-card.scss';
 import './layout.scss';
@@ -30,7 +28,6 @@ class Deck extends Component {
        }
     
     filterProducts = (products) => {
-        // console.log('product category id', products[0].category._id, 'state id', this.state.categoryId);
         let filteredProducts = products.filter(product=>{
             return product.category._id === this.state.categoryId;
         });
@@ -38,8 +35,8 @@ class Deck extends Component {
     }
 
   render() {
-    //   console.log('PROPS FROM RENDER!!!!!!!!!', this.props)
-        console.log('PRODUCTS from updateCategory!!!!!', this.state.products)
+    let categoryName = this.state.categoryName ? this.state.categoryName : '';
+    let categoryId = this.state.categoryId ? this.state.categoryId : '';
 
     return (
         <>
