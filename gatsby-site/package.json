@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
     "gatsby": "^2.1.18",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-manifest": "^2.0.19",
@@ -33,7 +35,14 @@
     "superagent": "^4.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "babel-jest": "^24.1.0",
+    "babel-preset-gatsby": "^0.1.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.1.0",
+    "jest-dom": "^3.1.2",
+    "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.3",
+    "react-testing-library": "^6.0.0"
   },
   "keywords": [
     "gatsby"
@@ -45,7 +54,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
