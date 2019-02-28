@@ -8,7 +8,7 @@ import { Link } from "gatsby";
 import './view-cart.scss'
 
 class ViewCart extends Component {
-  constructor(){
+  constructor(props){
     super(props)
     this.state = {
       total: 0.00,
