@@ -20,6 +20,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+
 });
 
 export default connect(

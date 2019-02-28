@@ -8,8 +8,13 @@ let initialState = {
   
     switch (type) {
       case "UPDATECART":
-        let newState = {...state, cart: [...state.cart, payload]};
-        return newState;
+        return {...state, cart: [...state.cart, payload]};
+        
+    
+      case "CLEARCART":
+      console.log('inside clear cart');
+        return {...state, cart: []};
+      
       
       case "CHANGECOLORTHEME":
         let newColorTheme = {...state, colorTheme: payload }

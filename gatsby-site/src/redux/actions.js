@@ -17,3 +17,9 @@ export const changeColorTheme = (color) => {
 
 
 
+export const clearCart = () => {
+  console.log('inside clear cart action');
+  return {
+    type: "CLEARCART"
+  }
+}

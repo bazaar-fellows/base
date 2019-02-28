@@ -19,6 +19,7 @@ class Deck extends Component {
             condition: false
         }
       }
+
     //bug fix
     clickCategory = (name, id) => {
     let filteredProducts = this.props.allProducts.filter(product=>{
@@ -26,7 +27,6 @@ class Deck extends Component {
     });
     this.setState({products: filteredProducts,categoryId: id, categoryName: name, condition: true});
         }
-    
 
   render() {
     let categoryName = this.state.categoryName ? this.state.categoryName : '';
