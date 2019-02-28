@@ -28,6 +28,8 @@ class ViewCart extends Component {
   }
   ///////////////////////////// Render ///////////////////////
 
+
+
   render() {
     const onSuccess = (payment) => {
 

@@ -6,7 +6,9 @@ import './layout.scss';
 import Card from './Card.js';
 import './dropdown.css';
 import './deck.scss';
-import AddProductMutation from '../pages/apollo/add-product.js';
+import Auth from '../auth/auth.js';
+
+import AddProductMutation from '../components/apollo/add-product.js'
 
 
 class Deck extends Component {
@@ -52,10 +54,13 @@ class Deck extends Component {
                     <Card key={product._id} content={product} />
                 ))}
                 </section>
-
+                
+                <Auth capibility="create">
                 <section>
-                    <AddProductMutation/>
+                    <AddProductMutation categoryId={this.state.categoryId}/>
                 </section>
+                </Auth>
+
           </Then>
             <Else condition={this.state.categoryId}>
                 <div className="imgContainer">
