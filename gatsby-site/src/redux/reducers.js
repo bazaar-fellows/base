@@ -8,7 +8,6 @@ let initialState = {
     switch (type) {
       case "UPDATECART":
         let newState = {...state, cart: [...state.cart, payload]};
-        console.log('new state', newState);
         return newState;
   
       default:

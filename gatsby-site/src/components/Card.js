@@ -47,7 +47,6 @@ export class Card extends Component {
 
 
   render() {
-    console.log('hello from CARDSSSS', this.props);
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
