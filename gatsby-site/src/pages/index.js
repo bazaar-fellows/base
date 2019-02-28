@@ -3,14 +3,14 @@ import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 
-import Mutation from './apollo/client.js';
-import DeleteMutation from './apollo/delete.js';
+import Mutation from './apollo/client';
+import DeleteMutation from './apollo/delete';
 import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
 import {ApolloProvider} from 'react-apollo';
 import ApolloClient from "apollo-boost";
-
-
+import SubHeader from '../components/subHeader';
+import ColorThemeButton from '../components/colorThemeButton';
 import { Link } from "gatsby"
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
@@ -20,8 +20,8 @@ import SEO from "../components/seo";
 import '../components/dropdown.css';
 import { Provider } from "react-redux";
 import {connect} from 'react-redux';
-import * as actions from '../redux/actions.js';
-import createStore from "../store/index.js";
+import * as actions from '../redux/actions';
+import createStore from "../store";
 export const store = createStore();
 
 
@@ -35,25 +35,16 @@ class IndexPage extends React.Component{
     return(
       <ApolloProvider client={client}>
         <Provider store = {store}>
-          <body className={this.props.colorTheme}>
-           <Layout colorTheme={this.props.colorTheme}>
+          <Layout>
 
-            <Mutation/>
-            <DeleteMutation/>
+          <Mutation/>
+          <DeleteMutation/>
 
-          <Auth capibility="update">
-            <div class="dropdown">
-              <button class="dropbtn">Change Theme</button>
-              <div class="dropdown-content">
-                <button onClick={() => this.darkTheme('dark')}>Dark</button>
-                <button onClick={() => this.lightTheme('light')}>Light</button>
-                <button onClick={() => this.colorTheme('color')}>Colorful</button>
-              </div>
-            </div>
-          </Auth>
+          <SubHeader />
+          <ColorThemeButton />
 
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          <h3 className={this.state.colorTheme}><Link to="/products">Shop Products</Link></h3>
+          
           <div classNameName='carsoul'>
       
             <input type="checkbox" className="faux-ui-facia" />
@@ -76,25 +67,10 @@ class IndexPage extends React.Component{
           </div>
       
         </Layout>
-        </body>
       </Provider>
     </ApolloProvider>
     )
   }
 }
 
-
-const mapStateToProps = state => ({
-  colorTheme: state.data.colorTheme
-});
-
-const mapDispatchToProps = (dispatch, getState) => ({
-  darkTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
-  lightTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
-  colorTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(IndexPage);
+export default IndexPage;
