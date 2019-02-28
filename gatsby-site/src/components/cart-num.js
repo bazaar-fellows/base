@@ -5,7 +5,6 @@ import * as actions from '../redux/actions';
 
 class CartNum extends Component {
   render() {
-    console.log('things in cart!!!!', this.props)
     return (
       <div className="cartNum">
         {this.props.cart.length}

@@ -5,8 +5,13 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+<<<<<<< HEAD
     "apollo-boost": "0.3.1",
     "apollo-client": "2.5.1",
+=======
+    "apollo-boost": "^0.3.1",
+    "apollo-client": "^2.5.1",
+>>>>>>> 2e8363decb854cdb6ea99f1ea3c877f7a0c73c0e
     "gatsby": "^2.1.18",
     "gatsby-image": "^2.0.30",
     "gatsby-plugin-manifest": "^2.0.19",
@@ -18,12 +23,20 @@
     "gatsby-source-graphql": "2.0.10",
     "gatsby-transformer-remark": "^2.2.6",
     "gatsby-transformer-sharp": "^2.1.14",
+<<<<<<< HEAD
     "graphql-tag": "2.10.1",
+=======
+    "graphql-tag": "^2.10.1",
+>>>>>>> 2e8363decb854cdb6ea99f1ea3c877f7a0c73c0e
     "jsonwebtoken": "^8.5.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
+<<<<<<< HEAD
     "react-apollo": "2.5.1",
+=======
+    "react-apollo": "^2.5.1",
+>>>>>>> 2e8363decb854cdb6ea99f1ea3c877f7a0c73c0e
     "react-cookies": "^0.1.0",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
