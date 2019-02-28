@@ -7,7 +7,12 @@ import * as actions from '../redux/actions';
 import card from './card.scss';
 import gql from 'graphql-tag';
 
+<<<<<<< HEAD
 import DeleteProduct from '../pages/apollo/delete-products';
+=======
+
+import DeleteProduct from '../components/apollo/delete-products.js';
+>>>>>>> 3692464533a24b708baf5b27aad9a6bd230b4337
 
 const customStyles = {
   content: {
@@ -29,6 +34,7 @@ export class Card extends Component {
     this.setState({ modalVisible: visible });
   }
 
+<<<<<<< HEAD
   editItem = (id) => {
     //edit the item
   }
@@ -39,6 +45,8 @@ export class Card extends Component {
   
     //this.props.updateProducts(newProducts);
   }
+=======
+>>>>>>> 3692464533a24b708baf5b27aad9a6bd230b4337
   addToCart = (id, name, price, description) =>{
     this.props.updateCart(id, name, price, description);
   }
@@ -48,7 +56,7 @@ export class Card extends Component {
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
-        <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
+        <img src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
         <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 

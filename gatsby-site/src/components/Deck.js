@@ -6,7 +6,9 @@ import './layout.scss';
 import Card from './Card.js';
 import './dropdown.css';
 import './deck.scss';
-import AddProductMutation from '../pages/apollo/add-product.js';
+import Auth from '../auth/auth.js';
+
+import AddProductMutation from '../components/apollo/add-product.js'
 
 
 class Deck extends Component {
@@ -19,6 +21,7 @@ class Deck extends Component {
             condition: false
         }
       }
+<<<<<<< HEAD
     //bug fix
     clickCategory = (name, id) => {
     let filteredProducts = this.props.allProducts.filter(product=>{
@@ -32,6 +35,19 @@ class Deck extends Component {
     let categoryName = this.state.categoryName ? this.state.categoryName : '';
     let categoryId = this.state.categoryId ? this.state.categoryId : '';
 
+=======
+       //bug fix
+      clickCategory = (name, id) => {
+        let filteredProducts = this.props.allProducts.filter(product=>{
+         return product.category._id === id;
+        });
+        this.setState({products: filteredProducts, categoryId: id, categoryName: name, condition: true});
+         }
+    
+
+  render() {
+    console.log(this.state.categoryId);
+>>>>>>> 3692464533a24b708baf5b27aad9a6bd230b4337
     return (
         <>
         <div>
@@ -52,10 +68,13 @@ class Deck extends Component {
                     <Card key={product._id} content={product} />
                 ))}
                 </section>
-
+                
+                <Auth capibility="create">
                 <section>
-                    <AddProductMutation/>
+                    <AddProductMutation categoryId={this.state.categoryId}/>
                 </section>
+                </Auth>
+
           </Then>
             <Else condition={this.state.categoryId}>
                 <div className="imgContainer">

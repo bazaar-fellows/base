@@ -27,10 +27,6 @@ class ViewCart extends Component {
   }
 
 
-
-
-
-
   render() {
     const onSuccess = (payment) => {
       console.log("Payment succeeded!", payment);
