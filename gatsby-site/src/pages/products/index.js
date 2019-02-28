@@ -1,41 +1,52 @@
 import React from "react"
-// import { Link } from "gatsby"
 import { graphql } from "gatsby"
-import List from '../../components/list';
-import Auth from '../../auth/auth';
 import './products.scss';
-import Deck from '../../components/Deck';
-
+import ProductQuery from '../../components/product-query'
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-function editItem() {
-  //edit the item
-}
+import {ApolloProvider} from 'react-apollo';
+import ApolloClient from "apollo-boost";
+import {client} from '../index';
 
-function deleteItem() {
-  //delete the item
+import { Provider } from "react-redux";
+<<<<<<< HEAD
+=======
+// import createStore from "../../store/index.js"
+// export const store = createStore();
 
-}
+>>>>>>> 2e8363decb854cdb6ea99f1ea3c877f7a0c73c0e
+import {store} from "../index.js";
+
 
 const Products = (props) => {
-  // const products = props.data.allMarkdownRemark.edges;
   return (
+<<<<<<< HEAD
+    <Provider store = {store}>
+
     <Layout>
       <SEO title="Products" />
       <h1>Products</h1>
-      {/* <List items={products} /> */}
-      <Deck />
+      <ProductQuery/>
 
-      <Auth capibility="update">
-        <button className='editButton' onSubmit={editItem}>Edit Product</button>
-      </Auth>
-
-      <Auth capibility="delete">
-        <button className='deleteButton' onSubmit={deleteItem}>Delete Product</button>
-      </Auth>
     </Layout>
+    </Provider>
+=======
+    <ApolloProvider client={client}>
+      <Provider store = {store}>
+
+      <Layout>
+        <SEO title="Products" />
+        <h1>Products</h1>
+        {/* <List items={products} /> */}
+        {/* <Deck /> */}
+        <ProductQuery/>
+
+      </Layout>
+      </Provider>
+    </ApolloProvider>
+>>>>>>> 2e8363decb854cdb6ea99f1ea3c877f7a0c73c0e
   )
 }
 

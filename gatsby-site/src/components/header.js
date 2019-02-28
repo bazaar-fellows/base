@@ -1,22 +1,25 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import CartNum from './cart-num';
 import './header.scss';
 
+
 const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <Link className="cart" to='/cart'>cart</Link>
-    </div>
-    <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
+    <header>
+      <div>
+        <Link className="cart" to='/cart'><span>🛒</span>cart
+        <CartNum/>
         </Link>
-      </h1>
-    </div>
-  </header>
+      </div>
+      <div>
+        <h1 style={{ margin: 0 }}>
+          <Link to="/">
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
+    </header>
 )
 
 Header.propTypes = {
