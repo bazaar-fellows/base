@@ -6,7 +6,7 @@ import * as actions from '../redux/actions';
 class CartNum extends Component {
   render() {
     return (
-      <div>
+      <div className="cartNum">
         {this.props.cart.length}
       </div>
     )
@@ -20,6 +20,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+
 });
 
 export default connect(
