@@ -1,32 +1,34 @@
 import React from "react"
-
+import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 
-import Mutation from './apollo/client.js';
-import DeleteMutation from './apollo/delete.js';
-import { graphql } from 'gatsby';
+import Mutation from './apollo/client';
+import DeleteMutation from './apollo/delete';
+import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient from "apollo-boost";
-
-
+import SubHeader from '../components/subHeader';
+import ColorThemeButton from '../components/colorThemeButton';
 import { Link } from "gatsby"
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
 import Layout from "../components/layout"
 import SEO from "../components/seo";
-
-
+import '../components/dropdown.css';
 import { Provider } from "react-redux";
-import createStore from "../store/index.js"
+import {connect} from 'react-redux';
+import * as actions from '../redux/actions';
+import createStore from "../store";
 export const store = createStore();
 
 
 export const client = new ApolloClient({
   uri: "https://bazaarapi.herokuapp.com/graphql"
 });
+
 
 const IndexPage = () => (
   <>
@@ -67,3 +69,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+

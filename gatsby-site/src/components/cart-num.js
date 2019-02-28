@@ -7,11 +7,13 @@ import { Provider } from 'react-redux';
 class CartNum extends Component {
   render() {
     return (
+
       <Provider>
         <div>
           {this.props.cart.length}
         </div>
       </Provider>
+
     )
   }
 }
@@ -23,6 +25,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+
 });
 
 export default connect(

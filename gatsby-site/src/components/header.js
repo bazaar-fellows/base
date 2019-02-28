@@ -5,22 +5,27 @@ import CartNum from './cart-num';
 import './header.scss';
 import Nav from './Nav.js';
 
+import ColorThemeButton from './ColorThemeButton';
+
 const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <Link className="cart" to='/cart'><span>🛒</span>cart
-      {/* <CartNum /> */}
-      </Link>
-    </div>
-    <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
+    <header>
+      <div>
+        <Link className="cart" to='/cart'><span>🛒</span>cart
+        <CartNum/>
         </Link>
-        <Nav />
-      </h1>
-    </div>
-  </header>
+      </div>
+
+      <ColorThemeButton />
+
+      <div>
+        <h1 style={{ margin: 0 }}>
+          <Link to="/">
+            {siteTitle}
+          </Link>
+  <Nav />
+        </h1>
+      </div>
+    </header>
 )
 
 Header.propTypes = {

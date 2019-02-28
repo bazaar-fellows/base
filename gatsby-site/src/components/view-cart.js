@@ -30,7 +30,9 @@ class ViewCart extends Component {
 
   render() {
     const onSuccess = (payment) => {
+
       console.log("Payment succeeded!", payment);
+      this.props.clearCart();
       this.setState({ paymentSuccess: true });
 
     }
@@ -105,12 +107,15 @@ class ViewCart extends Component {
   }
 }
 
+
+
 const mapStateToProps = state => ({
   cart: state.data.cart
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+  clearCart: () => dispatch(actions.clearCart()),
 });
 
 export default connect(
