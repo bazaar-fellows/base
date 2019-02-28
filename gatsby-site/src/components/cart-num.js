@@ -6,7 +6,7 @@ import * as actions from '../redux/actions';
 class CartNum extends Component {
   render() {
     return (
-      <div>
+      <div className="cartNum">
         {this.props.cart.length}
       </div>
     )

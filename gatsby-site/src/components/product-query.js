@@ -8,7 +8,7 @@ import Auth from '../auth/auth';
 import './nav.scss';
 import './layout.scss';
 
-import Deck from './Deck.js';
+import Deck from './Deck';
 
 
 class ProductQuery extends React.Component {

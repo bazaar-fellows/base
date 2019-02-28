@@ -7,6 +7,14 @@ export const updateCart = (id, name, price, description) => {
     };
   };
 
+export const changeColorTheme = (color) => {
+  console.log('payload fromm actions ', color);
+  return{
+    type: "CHANGECOLORTHEME",
+    payload: {color: color}
+  }
+}
+
 
 
 export const clearCart = () => {
