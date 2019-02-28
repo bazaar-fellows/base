@@ -6,7 +6,7 @@ class Background extends React.Component{
   render(){
     {console.log('in background with ', this.props.colorTheme)}
     return(
-        <div id="background" className={this.props.colorTheme}>    test   </div>
+        <div id="background" className={this.props.colorTheme}>       </div>
     )
   }
 }
