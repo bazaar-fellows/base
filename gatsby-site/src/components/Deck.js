@@ -26,9 +26,9 @@ class Deck extends Component {
         let filteredProducts = this.props.allProducts.filter(product=>{
          return product.category._id === id;
         });
-        this.setState({products: filteredProducts,categoryId: id, categoryName: name, condition: true});
+        this.setState({products: filteredProducts,categoryId: id, categoryName: name.toUpperCase(), condition: true});
          }
-    
+     
 
   render() {
 console.log(this.state.categoryId);

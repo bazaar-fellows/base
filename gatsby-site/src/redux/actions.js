@@ -9,3 +9,9 @@ export const updateCart = (id, name, price, description) => {
 
 
 
+export const clearCart = () => {
+  console.log('inside clear cart action');
+  return {
+    type: "CLEARCART"
+  }
+}
