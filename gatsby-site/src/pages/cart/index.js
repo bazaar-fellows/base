@@ -13,7 +13,7 @@ class Cart extends Component {
       <Provider store={store}>
         <div className='main-cart-container'>
           <ViewCart />
-      
+    
         </div>
       </Provider>
     )
