@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import CartNum from './cart-num';
 import './header.scss';
-
+import ColorThemeButton from './ColorThemeButton';
 
 const Header = ({ siteTitle }) => (
     <header>
@@ -12,6 +12,9 @@ const Header = ({ siteTitle }) => (
         <CartNum/>
         </Link>
       </div>
+
+      <ColorThemeButton />
+
       <div>
         <h1 style={{ margin: 0 }}>
           <Link to="/">

@@ -2,7 +2,6 @@ import React from "react"
 import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
-
 import Mutation from './apollo/client';
 import DeleteMutation from './apollo/delete';
 import {graphql} from 'gatsby';
@@ -36,36 +35,35 @@ class IndexPage extends React.Component{
       <ApolloProvider client={client}>
         <Provider store = {store}>
           <Layout>
+          <div className={this.props.colorTheme}>
+            <Mutation/>
+            <DeleteMutation/>
 
-          <Mutation/>
-          <DeleteMutation/>
+            <SubHeader />
 
-          <SubHeader />
-          <ColorThemeButton />
-
-          <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          
-          <div classNameName='carsoul'>
-      
-            <input type="checkbox" className="faux-ui-facia" />
-            <div className="slide" slide="5" annot="This is the fifth slide title. Photo by David Marcu.">
-              <img classNameName='carsoulImg' src={img1} alt="Slide 3" />
+            <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+            
+            <div className='carsoul'>
+        
+              <input type="checkbox" className="faux-ui-facia" />
+              <div className="slide" slide="5" annot="This is the fifth slide title. Photo by David Marcu.">
+                <img className='carsoulImg' src={img1} alt="Slide 3" />
+              </div>
+        
+        
+              <input type="checkbox" className="faux-ui-facia" />
+              <div className="slide" slide="4" annot="This is the fourth slide title. Photo by Ryan Lum.">
+                <img className='carsoulImg' src={img2} alt="Slide 2" />
+              </div>
+        
+              <input type="checkbox" className="faux-ui-facia" />
+              <div className="slide" slide="3" annot="This is the third slide title. Photo by Tomasz Paciorek.">
+                <img className='carsoulImg' src={img3} alt="Slide 1" />
+              </div>
+        
+              <div className="counter" count="3"> / 3</div>
             </div>
-      
-      
-            <input type="checkbox" className="faux-ui-facia" />
-            <div className="slide" slide="4" annot="This is the fourth slide title. Photo by Ryan Lum.">
-              <img classNameName='carsoulImg' src={img2} alt="Slide 2" />
-            </div>
-      
-            <input type="checkbox" className="faux-ui-facia" />
-            <div className="slide" slide="3" annot="This is the third slide title. Photo by Tomasz Paciorek.">
-              <img classNameName='carsoulImg' src={img3} alt="Slide 1" />
-            </div>
-      
-            <div className="counter" count="3"> / 3</div>
           </div>
-      
         </Layout>
       </Provider>
     </ApolloProvider>

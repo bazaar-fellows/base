@@ -8,18 +8,16 @@ import * as actions from '../redux/actions';
 class ColorThemeButton extends React.Component{
   render(){
     return(
-      <body className={this.props.colorTheme}>
-        <Auth capibility="update">
-          <div class="dropdown">
-            <button class="dropbtn">Change Theme</button>
-            <div class="dropdown-content">
-              <button onClick={() => this.darkTheme('dark')}>Dark</button>
-              <button onClick={() => this.lightTheme('light')}>Light</button>
-              <button onClick={() => this.colorTheme('color')}>Colorful</button>
-            </div>
+      <Auth capibility="update">
+        <div className="dropdown">
+          <button className="dropbtn">Change Theme</button>
+          <div className="dropdown-content">
+            <button onClick={() => this.props.darkTheme('dark')}>Dark</button>
+            <button onClick={() => this.props.lightTheme('light')}>Light</button>
+            <button onClick={() => this.props.colorTheme('color')}>Colorful</button>
           </div>
-        </Auth>
-      </body>
+        </div>
+      </Auth>
     );
   }
 }
@@ -28,10 +26,10 @@ const mapStateToProps = state => ({
   colorTheme: state.data.colorTheme
 });
 
-const mapDispatchToProps = (dispatch, getState) => ({
-  darkTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
-  lightTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
-  colorTheme: (color) => dispatch(actions.CHANGECOLORTHEME(color)),
+const mapDispatchToProps = (dispatch) => ({
+  darkTheme: (color) => dispatch(actions.changeColorTheme(color)),
+  lightTheme: (color) => dispatch(actions.changeColorTheme(color)),
+  colorTheme: (color) => dispatch(actions.changeColorTheme(color)),
 });
 
 export default connect(

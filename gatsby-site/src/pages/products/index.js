@@ -8,10 +8,10 @@ import SEO from "../../components/seo"
 
 import {ApolloProvider} from 'react-apollo';
 import ApolloClient from "apollo-boost";
-import {client} from '../index';
+import {client} from '..';
 
 import { Provider } from "react-redux";
-import {store} from "../index.js";
+import {store} from "..";
 
 
 const Products = (props) => {
