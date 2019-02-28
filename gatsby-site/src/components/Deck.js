@@ -21,17 +21,20 @@ class Deck extends Component {
             condition: false
         }
       }
-       //bug fix
-      clickCategory = (name, id) => {
-        let filteredProducts = this.props.allProducts.filter(product=>{
-         return product.category._id === id;
-        });
-        this.setState({products: filteredProducts, categoryId: id, categoryName: name, condition: true});
-         }
-    
+
+
+    //bug fix
+    clickCategory = (name, id) => {
+    let filteredProducts = this.props.allProducts.filter(product=>{
+        return product.category._id === id;
+    });
+    this.setState({products: filteredProducts,categoryId: id, categoryName: name, condition: true});
+        }
 
   render() {
-    console.log(this.state.categoryId);
+    let categoryName = this.state.categoryName ? this.state.categoryName : '';
+    let categoryId = this.state.categoryId ? this.state.categoryId : '';
+
     return (
         <>
         <div>

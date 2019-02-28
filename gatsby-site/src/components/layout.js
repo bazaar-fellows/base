@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { StaticQuery, graphql } from "gatsby"
+import { connect } from 'react-redux';
+
 
 import LoginContext from "../auth/context";
 import './layout.scss';
@@ -20,8 +23,8 @@ const Layout = ({ children }, props) => (
     `}
     render={data => (
       <LoginContext>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="contentContainer">
+        <Header colorTheme={props.colorTheme} siteTitle={data.site.siteMetadata.title} />
+        <div className="contentContainer" className={props.colorTheme}>
           <main>{children}</main>
         </div>
 
@@ -36,4 +39,10 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+const mapStateToProps = state => ({
+  colorTheme: state.data.colorTheme
+});
+
+export default connect(
+  mapStateToProps
+)(Layout);

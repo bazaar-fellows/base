@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import Header from '../components/header';
-import Cart from './cart/index';
 
-export class CartPage extends Component {
+export class lookbook extends Component {
   render() {
     return (
       <div>
         <Header siteTitle={'Bazaar'} />
-        <Cart />
-        <h1>CART!!!!</h1>
+        <h1>look Book page here</h1>
       </div>
     )
   }
 }
 
-export default CartPage
+export default lookbook
