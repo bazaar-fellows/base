@@ -3,8 +3,10 @@ import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
 
-import Mutation from './apollo/client';
-import DeleteMutation from './apollo/delete';
+import Mutation from '../components/apollo/category-mutation.js';
+import DeleteMutation from '../components/apollo/category-delete-mutation.js';
+
+
 import {graphql} from 'gatsby';
 import { Query } from 'react-apollo';
 import { ApolloProvider } from 'react-apollo';
@@ -33,7 +35,6 @@ export const client = new ApolloClient({
 const IndexPage = () => (
   <>
     <ApolloProvider client={client}>
-
       <Provider store={store}>
         <Layout>
           <Mutation />

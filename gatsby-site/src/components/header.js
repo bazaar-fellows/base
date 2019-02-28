@@ -22,6 +22,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/">
             {siteTitle}
           </Link>
+
   <Nav />
         </h1>
       </div>

@@ -17,6 +17,7 @@ let initialState = {
       
       
       case "CHANGECOLORTHEME":
+
         let newColorTheme = {...state, colorTheme: payload.color }
         console.log('new state with newColorTheme', newColorTheme);
         return newColorTheme;

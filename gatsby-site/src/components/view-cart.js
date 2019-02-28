@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import './view-cart.scss'
 
 class ViewCart extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -15,6 +16,9 @@ class ViewCart extends Component {
       paymentSuccess: false,
     }
   }
+ 
+  /////////////////// Totaling the Cart Items ///////////////
+
 
   /////////////////// Totaling the Cart Items ///////////////
 
@@ -26,6 +30,7 @@ class ViewCart extends Component {
     console.log(' 💎 ', total);
     this.setState({ total });
   }
+
   ///////////////////////////// Render ///////////////////////
 
   render() {
@@ -59,6 +64,7 @@ class ViewCart extends Component {
 
     return (
       <React.Fragment>
+
 
         <header>
           <h1>Bazaar</h1>
@@ -96,9 +102,7 @@ class ViewCart extends Component {
 
         <When condition={this.state.paymentSuccess}>
           <h1> Thanks for shopping at Bazaar! </h1>
-
         </When>
-
 
         {/* pass card totals, cardlist  */}
         {/* maybe add clearCart={true} as props */}

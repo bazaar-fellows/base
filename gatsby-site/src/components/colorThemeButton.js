@@ -8,6 +8,7 @@ import * as actions from '../redux/actions';
 class ColorThemeButton extends React.Component{
   render(){
     return(
+
       <Auth capibility="update">
         <div className="dropdown">
           <button className="dropbtn">Change Theme</button>
@@ -25,6 +26,7 @@ class ColorThemeButton extends React.Component{
 const mapStateToProps = state => ({
   colorTheme: state.data.colorTheme
 });
+
 
 const mapDispatchToProps = (dispatch) => ({
   darkTheme: (color) => dispatch(actions.changeColorTheme(color)),

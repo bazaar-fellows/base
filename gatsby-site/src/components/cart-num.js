@@ -8,6 +8,7 @@ class CartNum extends Component {
   render() {
     return (
 
+
       <Provider>
         <div>
           {this.props.cart.length}
