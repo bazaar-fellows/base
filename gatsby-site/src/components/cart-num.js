@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../redux/actions';
+import { Provider } from 'react-redux';
 
 
 class CartNum extends Component {
   render() {
     return (
-      <div>
-        {this.props.cart.length}
-      </div>
+      <Provider>
+        <div>
+          {this.props.cart.length}
+        </div>
+      </Provider>
     )
   }
 }

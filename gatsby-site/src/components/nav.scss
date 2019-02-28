@@ -1,33 +1,52 @@
-@import './design/_variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+// @import './design/_variables.scss';
+// @import url('https://fonts.googleapis.com/css?family=Oswald');
+// @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-nav{
-  border-top: 2px double lightgray;
-  border-bottom: 2px double lightgray;
-  font-family: 'Raleway', sans-serif;
+// nav{
+//   border-top: 2px double lightgray;
+//   border-bottom: 2px double lightgray;
+//   font-family: 'Raleway', sans-serif;
   
-  ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    margin: .2em;
-    padding: 0;
+//   ul{
+//     display: flex;
+//     list-style-type: none;
+//     justify-content: space-around;
+//     margin: .2em;
+//     padding: 0;
     
-    li{
-      color: $textColorLight;
-      font-size: .8em;
-      padding: 5px 0;
-      text-decoration: none;
+//     li{
+//       color: $textColorLight;
+//       font-size: .8em;
+//       padding: 5px 0;
+//       text-decoration: none;
       
-      a{
-        color: $textColorLight;
-        text-decoration: none;
+//       a{
+//         color: $textColorLight;
+//         text-decoration: none;
 
-        &:hover{
-          color: $accentColor;
-        }
-      }
-    }
-  }
+//         &:hover{
+//           color: $accentColor;
+//         }
+//       }
+//     }
+//   }
+// }
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.nav{
+  // background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: space-around
+ 
+}
+.productLink{
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  // background-color: blue;
+
 }

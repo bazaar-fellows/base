@@ -3,14 +3,13 @@ import PropTypes from "prop-types"
 import React from "react"
 import CartNum from './cart-num';
 import './header.scss';
+import Nav from './Nav.js';
 
 const Header = ({ siteTitle }) => (
   <header>
     <div>
-      
-
       <Link className="cart" to='/cart'><span>🛒</span>cart
-      <CartNum/>
+      {/* <CartNum /> */}
       </Link>
     </div>
     <div>
@@ -18,6 +17,7 @@ const Header = ({ siteTitle }) => (
         <Link to="/">
           {siteTitle}
         </Link>
+        <Nav />
       </h1>
     </div>
   </header>
