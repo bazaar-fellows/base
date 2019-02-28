@@ -16,6 +16,7 @@ class ViewCart extends Component {
     }
   }
  
+  /////////////////// Totaling the Cart Items ///////////////
 
   componentDidMount(){
     let total = 0;
@@ -25,11 +26,7 @@ class ViewCart extends Component {
     console.log(' 💎 ', total);
     this.setState({total});
   }
-
-
-
-
-
+///////////////////////////// Render ///////////////////////
 
   render() {
     const onSuccess = (payment) => {
@@ -60,6 +57,14 @@ class ViewCart extends Component {
 
     return (
       <React.Fragment>
+
+      <header>
+        <h1>Bazaar</h1>
+           
+
+        <Link className='linktohome' to="/products">Continue Shopping!</Link>
+      </header>
+
         <Unless condition={this.state.paymentSuccess}>
         <div className='cart'>
           <h2>Your Shopping Cart</h2>
@@ -73,10 +78,8 @@ class ViewCart extends Component {
               </div>
             ))}
           </div>
-          <div>Total {this.state.total} </div>
-   
+          <h4>Total {this.state.total} </h4>
 
-          <Link to="/products">Continue Shopping!</Link>
           <PaypalExpressBtn
         env={env}
         client={client}
@@ -90,7 +93,7 @@ class ViewCart extends Component {
     </ Unless>
 
     <When condition={this.state.paymentSuccess}>
-      <h1> Thank you for shopping with Bazaar </h1>
+      <h1> Thanks for shopping at Bazaar! </h1>
       
     </When>
 
