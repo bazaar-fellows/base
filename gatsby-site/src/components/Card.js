@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 import * as actions from '../redux/actions.js';
 import card from './card.scss';
 
-import DeleteProduct from '../pages/apollo/delete-products.js';
+
+import DeleteProduct from '../components/apollo/delete-products.js';
 
 const customStyles = {
   content: {
