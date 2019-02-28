@@ -9,6 +9,13 @@ header{
   border-bottom: 2px double lightgray;
 
   div{
+    .cartNum{
+      border-radius: 10px;
+      border: 1px solid gray;
+      background-color: $accentColor;
+      text-align: center;
+      margin-top: -3em;
+    }
 
     .cart{
       color: $textColor;
