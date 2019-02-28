@@ -53,7 +53,7 @@ export class Card extends Component {
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
-        <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
+        <img src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
         <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 
