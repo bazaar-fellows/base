@@ -24,7 +24,7 @@ import createStore from "../store/index.js"
 export const store = createStore();
 
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   uri: "https://bazaarapi.herokuapp.com/graphql"
 });
 

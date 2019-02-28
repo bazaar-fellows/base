@@ -10,28 +10,33 @@ import ProductQuery from '../../components/product-query'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-
+import {ApolloProvider} from 'react-apollo';
+import ApolloClient from "apollo-boost";
+import {client} from '../index';
 
 import { Provider } from "react-redux";
 // import createStore from "../../store/index.js"
 // export const store = createStore();
+
 import {store} from "../index.js";
 
 
 const Products = (props) => {
   // const products = props.data.allMarkdownRemark.edges;
   return (
-    <Provider store = {store}>
+    <ApolloProvider client={client}>
+      <Provider store = {store}>
 
-    <Layout>
-      <SEO title="Products" />
-      <h1>Products</h1>
-      {/* <List items={products} /> */}
-      {/* <Deck /> */}
-      <ProductQuery/>
+      <Layout>
+        <SEO title="Products" />
+        <h1>Products</h1>
+        {/* <List items={products} /> */}
+        {/* <Deck /> */}
+        <ProductQuery/>
 
-    </Layout>
-    </Provider>
+      </Layout>
+      </Provider>
+    </ApolloProvider>
   )
 }
 
