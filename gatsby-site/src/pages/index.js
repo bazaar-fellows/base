@@ -2,6 +2,15 @@ import React from "react"
 import Auth from "../auth/auth";
 import './carsoul.scss';
 import './index.scss';
+
+import Mutation from './apollo/client.js';
+import DeleteMutation from './apollo/delete.js';
+import {graphql} from 'gatsby';
+import { Query } from 'react-apollo';
+import {ApolloProvider} from 'react-apollo';
+import ApolloClient from "apollo-boost";
+
+
 import { Link } from "gatsby"
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
@@ -16,15 +25,21 @@ import createStore from "../store/index.js";
 export const store = createStore();
 
 
+export const client = new ApolloClient({
+  uri: "https://bazaarapi.herokuapp.com/graphql"
+});
 
 class IndexPage extends React.Component{
 
   render(){
     return(
-      <Provider store = {store}>
-        <body className={this.props.colorTheme}>
-      
-        <Layout colorTheme={this.props.colorTheme}>
+      <ApolloProvider client={client}>
+        <Provider store = {store}>
+          <body className={this.props.colorTheme}>
+           <Layout colorTheme={this.props.colorTheme}>
+
+            <Mutation/>
+            <DeleteMutation/>
 
           <Auth capibility="update">
             <div class="dropdown">
@@ -63,9 +78,11 @@ class IndexPage extends React.Component{
         </Layout>
         </body>
       </Provider>
+    </ApolloProvider>
     )
   }
 }
+
 
 const mapStateToProps = state => ({
   colorTheme: state.data.colorTheme
@@ -81,4 +98,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(IndexPage);
-

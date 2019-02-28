@@ -6,7 +6,9 @@ import ProductQuery from '../../components/product-query'
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-
+import {ApolloProvider} from 'react-apollo';
+import ApolloClient from "apollo-boost";
+import {client} from '../index';
 
 import { Provider } from "react-redux";
 import {store} from "../index.js";
@@ -14,15 +16,17 @@ import {store} from "../index.js";
 
 const Products = (props) => {
   return (
-    <Provider store = {store}>
+    <ApolloProvider client={client}>
+      <Provider store = {store}>
 
-    <Layout>
-      <SEO title="Products" />
-      <h1>Products</h1>
-      <ProductQuery/>
+      <Layout>
+        <SEO title="Products" />
+        <h1>Products</h1>
+        <ProductQuery/>
 
-    </Layout>
-    </Provider>
+      </Layout>
+      </Provider>
+    </ApolloProvider>
   )
 }
 
