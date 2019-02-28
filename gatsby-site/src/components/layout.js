@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby";
-import {connect} from 'react-redux';
+
+import { StaticQuery, graphql } from "gatsby"
+import { connect } from 'react-redux';
+
+
 import LoginContext from "../auth/context";
 import './layout.scss';
 import Header from "./header"
