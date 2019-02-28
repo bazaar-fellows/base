@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 import * as actions from '../redux/actions.js';
 import card from './card.scss';
 
+import DeleteProduct from '../pages/apollo/delete-products.js';
+
 const customStyles = {
   content: {
     top: '50%',
@@ -53,6 +55,7 @@ export class Card extends Component {
         <div>{this.props.content.name}</div>
         <img src={this.props.content.image} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
+        <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 
 
         <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>Learn More</button>

@@ -8,6 +8,7 @@ import './layout.scss';
 import Card from './Card.js';
 import './dropdown.css';
 import './deck.scss';
+import AddProductMutation from '../pages/apollo/add-product.js';
 
 
 class Deck extends Component {
@@ -50,6 +51,10 @@ console.log(this.state.categoryId);
                 {this.state.products.map( product => (
                     <Card key={product._id} content={product} />
                 ))}
+                </section>
+
+                <section>
+                    <AddProductMutation/>
                 </section>
           </Then>
             <Else condition={this.state.categoryId}>
