@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import * as actions from '../redux/actions';
+
 
 class CartNum extends Component {
   render() {
-      console.log('things in cart!!!!', this.props)
+    console.log('things in cart!!!!', this.props)
     return (
       <div>
         {this.props.cart.length}
@@ -15,7 +16,7 @@ class CartNum extends Component {
 
 
 const mapStateToProps = state => ({
-    cart: state.data.cart
+  cart: state.data.cart
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
