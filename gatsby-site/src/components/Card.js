@@ -29,21 +29,6 @@ export class Card extends Component {
     this.setState({ modalVisible: visible });
   }
 
-  // editItem = (id) => {
-  //   //edit the item
-  // }
-  
-  // deleteItem = (id) => {
-  //   let newProducts = [];
-  //   console.log('my props content', this.props.content);
-  //   for (let product in this.props){
-  //     if(product.content[id] !== id){
-  //       newProducts.push(product.content);
-  //     }
-  //   }
-  
-  //   this.props.updateProducts(newProducts);
-  // }
   addToCart = (id, name, price, description) =>{
     this.props.updateCart(id, name, price, description);
   }
