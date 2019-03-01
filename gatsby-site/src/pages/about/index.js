@@ -104,7 +104,7 @@ return (
         <button onClick={(e)=>this.clearAbout(e)}>Clear About Content</button>
         <button onClick={(e)=>this.clearImg(e)}>Clear Image</button>
 
-        <div className='aboutContentContainer'>
+        <div className='aboutContentContainer' id="test">
           <img alt='about image' src={this.state.image} style={{ width: "700px", height: '500px' }}/>
           
         </div>
