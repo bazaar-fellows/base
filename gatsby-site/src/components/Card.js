@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import Auth from '../auth/auth';
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
+import './design/modal.scss';
 
 
 import DeleteProduct from '../components/apollo/delete-products.js';
@@ -59,8 +60,7 @@ export class Card extends Component {
           style={customStyles}
           contentLabel="Example Modal">
           <h1>{this.props.content.name}</h1>
-          <img alt='product' src={this.props.content.image} style={{ width: "500px", height: '500px' }} />
-          <div>{this.props.content.description}</div>
+          <img alt='product' src={this.props.content.description} style={{ width: "500px", height: '500px' }} />
           <div>{this.props.content.price}</div>
 
           <Auth capibility="update">
