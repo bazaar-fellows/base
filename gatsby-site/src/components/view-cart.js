@@ -5,7 +5,7 @@ import * as actions from '../redux/actions';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 import { Link } from "gatsby";
 
-import './view-cart.scss'
+import '../components/design/view-cart.scss'
 
 class ViewCart extends Component {
   constructor(props){

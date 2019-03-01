@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import './footer.scss';
+import '../components/design/footer.scss';
 
 const Footer = ({ siteTitle }) => (
     <footer>

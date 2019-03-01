@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import { Provider } from "react-redux";
 import { store } from '../index.js';
 import ViewCart from '../../components/view-cart.js';
-import PayPalBtn from '../../components/PayPalBtn';
 
-import '../../components/view-cart.scss'
+import '../../components/design/view-cart.scss';
 
 class Cart extends Component {
   render() {

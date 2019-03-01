@@ -1,7 +1,7 @@
 import React from "react"
 import Auth from "../auth/auth";
-import '../pages/index.scss';
-import './dropdown.css';
+import '../components/design/index.scss';
+import '../components/design/dropdown.css';
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
 

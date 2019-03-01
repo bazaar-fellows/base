@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { StaticQuery, graphql } from 'gatsby';
 
 //adding connect to the reduct store
 
-import Auth from '../auth/auth';
-import './nav.scss';
-import './layout.scss';
+import '../components/design/nav.scss';
+import '../components/design/layout.scss';
 
 import Deck from './Deck';
 

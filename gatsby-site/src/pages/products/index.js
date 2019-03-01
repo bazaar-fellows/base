@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import './products.scss';
+import '../../components/design/products.scss';
 import ProductQuery from '../../components/product-query'
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 import {ApolloProvider} from 'react-apollo';
-import ApolloClient from "apollo-boost";
 import {client} from '..';
 
 import { Provider } from "react-redux";

@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Auth from '../auth/auth';
-import { Mutation } from 'react-apollo'
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
-import card from './card.scss';
-import gql from 'graphql-tag';
 
 
 import DeleteProduct from '../components/apollo/delete-products.js';
@@ -48,7 +45,7 @@ export class Card extends Component {
     return (
       <div className="card">
         <div>{this.props.content.name}</div>
-        <img src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
+        <img alt='product' src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
         <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
 
@@ -62,7 +59,7 @@ export class Card extends Component {
           style={customStyles}
           contentLabel="Example Modal">
           <h1>{this.props.content.name}</h1>
-          <img src={this.props.content.image} style={{ width: "500px", height: '500px' }} />
+          <img alt='product' src={this.props.content.image} style={{ width: "500px", height: '500px' }} />
           <div>{this.props.content.description}</div>
           <div>{this.props.content.price}</div>
 

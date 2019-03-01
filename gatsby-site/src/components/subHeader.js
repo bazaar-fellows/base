@@ -1,5 +1,5 @@
 import React from "react"
-import '../pages/index.scss';
+import '../components/design/index.scss'
 import {connect} from 'react-redux';
 import { Link } from "gatsby"
 

@@ -21,7 +21,7 @@ class CreateDeleteProduct extends Component {
 
 
     vertifyDelete= (name) =>{
-        if(this.props.productName = name){
+        if(this.props.productName === name){
             this.setState({_id: this.props.productId})
         }
     }

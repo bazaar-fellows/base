@@ -3,13 +3,14 @@ import PropTypes from "prop-types"
 import React from "react"
 import {connect} from 'react-redux';
 import CartNum from './cart-num';
-import './header.scss';
+import '../components/design/header.scss';
 import ColorThemeButton from './ColorThemeButton';
 
 const Header = ({ siteTitle }, props) => (
     <header className={props.colorTheme}>
       <div>
-        <Link className="cart" to='/cart'><span>🛒</span>cart
+        <Link className="cart" to='/cart'>
+        <span>🛒 cart</span> 
         <CartNum/>
         </Link>
       </div>
