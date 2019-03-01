@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import '../../components/design/products.scss';
 import ProductQuery from '../../components/product-query'
+import Background from '../../components/background';
+import SubHeader from '../../components/subHeader';
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -20,9 +22,9 @@ const Products = (props) => {
 
       <Layout>
         <SEO title="Products" />
-        <h1>Products</h1>
+        <SubHeader />
         <ProductQuery/>
-
+      <Background />
       </Layout>
       </Provider>
     </ApolloProvider>

@@ -4,7 +4,7 @@ import '../components/design/index.scss';
 
 import Mutation from '../components/apollo/category-mutation.js';
 import DeleteMutation from '../components/apollo/category-delete-mutation.js';
-import Auth from "../auth/auth";
+import Auth from "../auth/auth"
 import {ApolloProvider} from 'react-apollo';
 import ApolloClient from "apollo-boost";
 import SubHeader from '../components/subHeader';

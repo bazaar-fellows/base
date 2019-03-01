@@ -18,6 +18,10 @@ header{
     background: $backgroundColor;
   }
 
+  span{
+    color: $accentColor;
+  }
+
   div{
     .cartNum{
       border-radius: 10px;
