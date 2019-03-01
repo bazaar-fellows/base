@@ -5,8 +5,10 @@ import '../components/design/index.scss';
 import Mutation from '../components/apollo/category-mutation.js';
 import DeleteMutation from '../components/apollo/category-delete-mutation.js';
 
-import Auth from "../auth/auth.js"
+import Auth from "../auth/auth"
+
 import {ApolloProvider} from 'react-apollo';
+
 import ApolloClient from "apollo-boost";
 import SubHeader from '../components/subHeader';
 import img1 from '../images/img1.jpg';
@@ -18,7 +20,10 @@ import '../components/design/dropdown.css';
 import Background from "../components/background";
 import { Provider } from "react-redux";
 import createStore from "../store";
+import Auth from '../auth/auth';
+
 export const store = createStore();
+
 
 
 
@@ -28,18 +33,21 @@ export const client = new ApolloClient({
 
 const IndexPage = () => (
   <>
+
   <ApolloProvider client={client}>
+
+
 
   <Provider store = {store}>
   <Layout>
 
-    <Auth capibility="delete">
-      <p> Add category </p>
-      <Mutation/>
-      <p> delete category by id</p>
-      <DeleteMutation/>
-    </Auth>
-
+      <Auth capibility="delete">
+        <p> Add category </p>
+        <Mutation/>
+        <p> delete category by id</p>
+        <DeleteMutation/>
+      </Auth>
+  
     <SubHeader />
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className='carsoul'>

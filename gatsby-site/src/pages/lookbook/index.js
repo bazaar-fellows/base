@@ -1,8 +1,10 @@
+
 import React, { Component } from 'react'
 import Auth from '../../auth/auth';
 import Layout from '../../components/layout';
 import { store } from '../index';
 import { Provider } from "react-redux";
+import Header from '../../components/header';
 
 class LookBook extends Component {
     constructor(props){
@@ -46,9 +48,21 @@ class LookBook extends Component {
       </div>
     </Layout>
     </Provider>
+
+
+
+
+  render() {
+    return (
+      <div>
+        <h1>LookBook</h1>
+
+      </div>
     )
   }
 }
 
 
 export default LookBook;
+
+

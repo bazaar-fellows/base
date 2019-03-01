@@ -1,12 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
 import '../components/design/footer.scss';
 
 const Footer = ({ siteTitle }) => (
     <footer>
-
-
       <div>
         <h1>
           <Link
@@ -17,7 +15,6 @@ const Footer = ({ siteTitle }) => (
           </Link>
         </h1>
       </div>
-
     </footer>
 )
 
@@ -29,4 +26,4 @@ Footer.defaultProps = {
     siteTitle: ``,
   }
   
-  export default Footer
+export default Footer;
