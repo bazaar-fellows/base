@@ -48,7 +48,7 @@ class LookBook extends Component {
       </div>
     </Layout>
     </Provider>
-   )
-}
+    )
+  }
 }
 export default LookBook;
