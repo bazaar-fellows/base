@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Auth from '../auth/auth';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import './design/modal.scss';
 
@@ -19,6 +19,7 @@ const customStyles = {
   }
 };
 
+
 export class Card extends Component {
   state = {
     modalVisible: false,
@@ -31,13 +32,13 @@ export class Card extends Component {
   editItem = (id) => {
     //edit the item
   }
-  
+
   deleteItem = (id) => {
     console.log('my props content❤️', this.props.content);
 
-    }
+  }
 
-  addToCart = (id, name, price, description) =>{
+  addToCart = (id, name, price, description) => {
     this.props.updateCart(id, name, price, description);
   }
 
@@ -78,7 +79,7 @@ export class Card extends Component {
             this.props.content.name,
             this.props.content.price,
             this.props.content.description)
-            }>Add To Cart</button>
+          }>Add To Cart</button>
           <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>CLOSE!</button>
         </Modal>
       </div>
