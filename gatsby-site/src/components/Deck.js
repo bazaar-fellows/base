@@ -8,6 +8,7 @@ import '../components/design/dropdown.css';
 import Auth from '../auth/auth.js';
 
 import AddProductMutation from '../components/apollo/add-product.js'
+import { Z_FIXED } from 'zlib';
 
 
 class Deck extends Component {
@@ -29,20 +30,31 @@ class Deck extends Component {
     this.setState({ products: filteredProducts, categoryId: id, categoryName: name, condition: true });
   }
 
+
+  
+
   render() {
+
+    const styles = {
+      categoryStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        marginLeft: '3%',
+        marginRight: '7%'
+      }
+    }
 
     return (
       <>
         <div>
-          <div className="dropdown">
-            <button className="dropbtn">Categories</button>
-            <div className="dropdown-content">
-              {this.props.allCategories.map(category => (
+          <div className="card-deck">
+
+          <div style={styles.categoryStyle}> 
+          {this.props.allCategories.map(category => (
                 <span key={category._id} onClick={() => this.clickCategory(category.name, category._id)}>{category.name}</span>
               ))}
-            </div>
           </div>
-          <div className="card-deck">
 
             <If condition={this.state.categoryId}>
               <Then>
