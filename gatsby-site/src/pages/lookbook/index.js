@@ -48,16 +48,6 @@ class LookBook extends Component {
       </div>
     </Layout>
     </Provider>
-
-
-
-
-  render() {
-    return (
-      <div>
-        <h1>LookBook</h1>
-
-      </div>
     )
   }
 }
