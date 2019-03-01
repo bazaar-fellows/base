@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../../components/design/about.scss';
 import Auth from '../../auth/auth';
 import Layout from '../../components/layout';
 import { store } from '../index';
 import { Provider } from "react-redux";
 import Background from '../../components/background';
-
 
 class About extends React.Component{
   constructor(props){
@@ -69,10 +69,15 @@ return (
         <button onClick={(e)=>this.clearAbout(e)}>Clear About Content</button>
         <button onClick={(e)=>this.clearImg(e)}>Clear Image</button>
 
-        <div>
+        <div className='contentContainer'>
           <img alt='about image' src={this.state.image} style={{ width: "700px", height: '500px' }}/>
-          <p>{this.state.about}</p>
+          
         </div>
+
+        <p>{this.state.about}</p>
+
+        
+
      </Auth> 
   </div>
 </Layout>
