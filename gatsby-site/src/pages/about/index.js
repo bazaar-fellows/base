@@ -76,6 +76,21 @@ return (
 <Layout>
 <Background />
   <div>
+    <div className='about-container'>
+      <div className='our-story'>
+        <h2 style={{textAlign: 'center', paddingTop: 40}}>Our Story</h2>
+        <p style={{padding: 40, fontSize: 18}}>Heather Cherewaty [12:38 PM]
+We are excited to bring you high-quality, unique dog style and goods, handcrafted by us in our PNW workshop. All of our fabrics and leathers are hand-picked pieces that embody not only vibrant, urban landscapes, but a sense of the great outdoors as well. Whether your canine is outfitted in bold, on trend sidewalk-style or whether they prefer the comforts of rugged Pendleton® wools and beauty of the great outdoors, we're sure to have a striking collar that your dog will wear proudly. We've been inspired by the spunk and love of a lil' dog named Olive, and the zealous bark and loyalty of a big dog named Atlas. They've shown us the unbreakable bond that can exist between a person and a dog, and we believe that by nourishing this bond, we can create more beauty in this world. In this same way, we're dedicated to creating beautiful dog accessories and handcrafted goods that will bring people and their beloved canines together. We donate to both Old Dog Haven and Project Canine, and thank you for helping us to support their missions.
+
+OLIVE + ATLAS
+
+Est. 9/2015.</p>
+      </div>
+      <div className='meet-the-team' style={{display:'flex', alignItems: 'center', flexDirection: 'column'}}>
+        <h2 style={{textAlign: 'center'}}>Meet The Team!</h2>
+        <img style={{}} src='https://res.cloudinary.com/olive-atlas/image/upload/v1551472788/heather_atlas_howarth.jpg'/>
+      </div>
+    </div>
      <Auth capability="create">
         {/* <form onSubmit={this.handleAboutSubmit}> */}
         <div style={styles.divStyle}>

@@ -63,6 +63,9 @@ class LogInForm extends React.Component {
         color: 333333,
         borderBottomWidth: 1,
 
+      },
+      layout: {
+        marginTop: 20
       }
     }
 

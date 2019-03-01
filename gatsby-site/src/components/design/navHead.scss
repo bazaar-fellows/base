@@ -7,12 +7,13 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  // background-color: yellow;
+  // padding-bottom: 20px;
 }
 
 .navLink{
   font-size: .4em;
-  padding: 10px;
-  padding: 1px;
+  // background-color: red;
 
   &:hover{
     color: $textColorLight

@@ -27,7 +27,7 @@ body{
     flex-direction: row;
 
     &.light{
-      background-color: $background;
+      background-color: $backgroundColor;
       color: $textColor;
     }
 
@@ -42,7 +42,7 @@ body{
     }
 
     nav{
-      background-color: rgb(205, 222, 179);
+      background-color: $backgroundColor;
       order: 1;
       margin-top: 1em;
     }

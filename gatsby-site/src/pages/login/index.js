@@ -13,8 +13,8 @@ const IndexPage = () => (
   <Provider store = {store}>
   <Layout>
       <SEO title="LogIn" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="login">
-        <h1>Log In</h1>
+      <div className="login" style={{ height: '500%', padding: 70}}>
+        {/* <h1>Log In</h1> */}
         <LogInForm/>
       </div>
   </Layout>

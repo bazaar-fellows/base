@@ -4,7 +4,19 @@
 header{
   clear:both;
   padding-top: 1em;
-  border-bottom: 2px double lightgray;
+  border-bottom: 2px double lightgrey;
+
+  padding-bottom: 30px;
+
+
+  img{
+    width: 3em;
+    height: 3em;
+    align-items: center;
+    // margin-bottom: 50px;
+    // padding-bottom:50px
+  }
+
 
   .dropdown-content{
     span{
