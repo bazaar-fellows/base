@@ -10,7 +10,7 @@ export class Nav extends Component {
         <Link className='navLink' to="/products">SHOP</Link>
         <Link className='navLink' to="/about">ABOUT</Link>
         <Link className='navLink' to="/lookbook">LOOKBOOK</Link>
-        {/* <Link className='navLink' to="/contact">CONTACT</Link> */}
+        <Link className='navLink' to="/contact">CONTACT</Link>
       </div>
     )
   }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+import TextField from '@material-ui/core/TextField';
+
 
 const POST_MUTATION = gql`
 mutation DeleteMutation($_id: String!) {
@@ -29,17 +31,30 @@ class CreateDeleteProduct extends Component {
 
 
   render() {
+
+    const styles = {
+      inputStyle: {
+        alignSelf: 'stretch',
+        height: 40,
+        marginLeft: 15,
+        marginBottom: 30,
+        color: '#333333',
+        borderBottomWidth: 1,
+        }
+      };
     console.log('props from delete', this.props)
     const { _id } = this.props.productId
     return (
       <div>
         <div className="flex flex-column mt3">
-          <input
+
+          <TextField
+            style={styles.inputStyle}
             className="mb2"
             value={_id}
             onSubmit={e => this.vertifyDelete(e.target.value)}
             type="text"
-            placeholder="name of product"
+            placeholder="Name"
           />
         </div>
         <Mutation mutation={POST_MUTATION} variables={{ _id: this.props.productId }}>

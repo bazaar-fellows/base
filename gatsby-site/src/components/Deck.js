@@ -61,7 +61,7 @@ class Deck extends Component {
               </Then>
               <Else condition={this.state.categoryId}>
                 <div className="imgContainer">
-                  <img alt='featured product' className="featuredImage" src="https://images.unsplash.com/photo-1522273400909-fd1a8f77637e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2200&q=80" />
+                  <img alt='featured product' className="featuredImage" src="https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg" />
                 </div>
               </Else>
             </If>
