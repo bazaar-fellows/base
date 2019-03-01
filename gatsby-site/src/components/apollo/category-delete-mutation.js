@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+import Input from '@material-ui/core/Input';
+
 
 const POST_MUTATION = gql`
 mutation DeleteMutation($_id: String!) {
@@ -21,7 +23,7 @@ class CreateDelete extends Component {
     return (
       <div>
         <div className="flex flex-column mt3">
-          <input
+          <Input
             className="mb2"
             value={_id}
             onChange={e => this.setState({ _id: e.target.value })}
