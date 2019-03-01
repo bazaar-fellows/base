@@ -10,9 +10,7 @@ header{
     span{
       color: $textColor;
       display:block;
-      padding-top: 5px;
-      margin-top: 5px;
-      margin-left: 5px;
+      padding: 5px;
 
       &:hover{
         color:$textColorLight;
