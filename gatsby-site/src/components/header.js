@@ -10,7 +10,7 @@ const Header = ({ siteTitle }, props) => (
     <header className={props.colorTheme}>
       <div>
         <Link className="cart" to='/cart'>
-        <span>🛒 cart</span> 
+        <span className={props.colorTheme}>🛒 cart</span> 
         <CartNum/>
         </Link>
       </div>
@@ -18,7 +18,7 @@ const Header = ({ siteTitle }, props) => (
       <ColorThemeButton />
 
       <div>
-        <h1 style={{ margin: 0 }}>
+        <h1 className={props.colorTheme} style={{ margin: 0 }}>
           <Link to="/">
             {siteTitle}
           </Link>
