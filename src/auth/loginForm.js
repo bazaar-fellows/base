@@ -13,7 +13,6 @@ const API = "https://javascript-401-api.herokuapp.com";
 class LogInForm extends React.Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log('!!!!!!!!!!!!!!!!!!!!!!! after submiting form ', [e.target.name], e.target.value);
   };
 
   handleSubmit = (e, loginMethodFromContext) => {
