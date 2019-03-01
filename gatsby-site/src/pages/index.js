@@ -4,7 +4,7 @@ import '../components/design/index.scss';
 
 import Mutation from '../components/apollo/category-mutation.js';
 import DeleteMutation from '../components/apollo/category-delete-mutation.js';
-
+import Auth from "../auth/auth";
 import {ApolloProvider} from 'react-apollo';
 import ApolloClient from "apollo-boost";
 import SubHeader from '../components/subHeader';
@@ -29,16 +29,16 @@ const IndexPage = () => (
   <>
   <ApolloProvider client={client}>
 
-  {/* <Auth capibility="delete"> */}
-    <p> Add category </p>
-    <Mutation/>
-    <p> delete category by id</p>
-    <DeleteMutation/>
-  {/* </Auth> */}
 
   <Provider store = {store}>
   <Layout>
 
+      <Auth capibility="delete">
+        <p> Add category </p>
+        <Mutation/>
+        <p> delete category by id</p>
+        <DeleteMutation/>
+      </Auth>
     <SubHeader />
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className='carsoul'>
