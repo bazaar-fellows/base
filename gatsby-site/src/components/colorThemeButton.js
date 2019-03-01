@@ -14,9 +14,9 @@ class ColorThemeButton extends React.Component{
         <div className="dropdown">
           <button className="dropbtn">Change Theme</button>
           <div className="dropdown-content">
-            <button onClick={() => this.props.darkTheme('dark')}>Dark</button>
-            <button onClick={() => this.props.lightTheme('light')}>Light</button>
-            <button onClick={() => this.props.colorTheme('color')}>Colorful</button>
+            <span onClick={() => this.props.darkTheme('dark')}>Dark</span>
+            <span onClick={() => this.props.lightTheme('light')}>Light</span>
+            <span onClick={() => this.props.colorTheme('color')}>Colorful</span>
           </div>
         </div>
         </div>

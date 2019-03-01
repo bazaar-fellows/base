@@ -6,14 +6,12 @@ import '../components/design/footer.scss';
 const Footer = ({ siteTitle }) => (
     <footer>
       <div>
-        <h1>
           <Link
             to="/"
             >
             {siteTitle}
             Copyright 2019 Bazaar-Fellows
           </Link>
-        </h1>
       </div>
     </footer>
 )
