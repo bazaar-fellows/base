@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+import '../design/form.scss';
+import Input from '@material-ui/core/Input';
 
 const POST_MUTATION = gql`
 mutation PostMutation($name: String!, $description: String!, $price: Float!, $qty: Int!, $category: String! ) {
@@ -39,7 +41,7 @@ class CreateLink extends Component {
     return (
       <div>
         <div className="flex flex-column mt3">
-          <input
+          <Input
             className="mb2"
             value={name}
             onChange={e => this.setState({ name: e.target.value })}
@@ -53,14 +55,14 @@ class CreateLink extends Component {
             type="text"
             placeholder="A description for the product"
           />
-            <input
+            <Input
             className="mb2"
             value={price}
             onChange={e => this.setState({ price: parseInt(e.target.value) })}
             type="number"  
             placeholder="A price for the product"
           />   
-            <input
+            <Input
             className="mb2"
             value={qty}
             onChange={e => this.setState({ qty: parseInt(e.target.value) })}

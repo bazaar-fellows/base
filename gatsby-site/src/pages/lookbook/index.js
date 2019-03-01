@@ -51,8 +51,4 @@ class LookBook extends Component {
     )
   }
 }
-
-
 export default LookBook;
-
-
