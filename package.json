@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bazaar-fellows",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -50,8 +50,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "start": "gatsby serve",
     "heroku-postbuild": "gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -61,5 +60,7 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/bazaar-fellows/base#readme",
+  "main": "gatsby-browser.js"
 }
