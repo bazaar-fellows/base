@@ -18,7 +18,7 @@ const styles = {
     borderBottomWidth: 1,
     },
     divStyle: {
-      width: 900
+      width: 500, 
     }
   };
 
@@ -109,7 +109,7 @@ return (
           
         </div>
 
-        <div style={styles.divStyle}>
+        <div className="aboutInfo">
         <p>{this.state.about}</p>
         </div>
 
