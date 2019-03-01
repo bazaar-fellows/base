@@ -30,8 +30,12 @@ class Deck extends Component {
     this.setState({ products: filteredProducts, categoryId: id, categoryName: name, condition: true });
   }
 
+  showAllProducts = () => {
+    this.setState({ products: this.props.allProducts })
+  }
 
-  
+
+
 
   render() {
 
@@ -39,9 +43,12 @@ class Deck extends Component {
       categoryStyle: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-evenly',
         marginLeft: '3%',
         marginRight: '7%'
+      },
+      catItem: {
+        padding: '10px',
+        cursor: 'pointer'
       }
     }
 
@@ -50,11 +57,12 @@ class Deck extends Component {
         <div>
           <div className="card-deck">
 
-          <div style={styles.categoryStyle}> 
-          {this.props.allCategories.map(category => (
-                <span key={category._id} onClick={() => this.clickCategory(category.name, category._id)}>{category.name}</span>
+            <div style={styles.categoryStyle}>
+              <span style={styles.catItem} onClick={this.showAllProducts}>Show All</span>
+              {this.props.allCategories.map(category => (
+                <span style={styles.catItem} key={category._id} onClick={() => this.clickCategory(category.name, category._id)}>{category.name}</span>
               ))}
-          </div>
+            </div>
 
             <If condition={this.state.categoryId}>
               <Then>
@@ -73,7 +81,12 @@ class Deck extends Component {
               </Then>
               <Else condition={this.state.categoryId}>
                 <div className="imgContainer">
-                  <img alt='featured product' className="featuredImage" src="https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg" />
+                  {/* <img style={{ paddingTop: '10px', width: '90%' }} alt='featured product' className="featuredImage" src="https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg" /> */}
+                  <section className="deck">
+                    {this.props.allProducts.map(product => (
+                      <Card key={product._id} content={product} />
+                    ))}
+                  </section>
                 </div>
               </Else>
             </If>

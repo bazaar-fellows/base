@@ -3,7 +3,6 @@ import LBCard from './LBCard';
 
 export class LBDeck extends Component {
   render() {
-    console.log(this.props.pics[0], ' hahah');
     return (
       <div>
         <section className="deck">
