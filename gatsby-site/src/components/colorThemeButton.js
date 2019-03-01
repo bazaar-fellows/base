@@ -4,11 +4,13 @@ import '../components/design/index.scss';
 import '../components/design/dropdown.css';
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
+import "./design/userThemeButton.scss";
 
 class ColorThemeButton extends React.Component{
   render(){
     return(
       <Auth capibility="update">
+        <div id="colorThemeButton">
         <div className="dropdown">
           <button className="dropbtn">Change Theme</button>
           <div className="dropdown-content">
@@ -16,6 +18,7 @@ class ColorThemeButton extends React.Component{
             <button onClick={() => this.props.lightTheme('light')}>Light</button>
             <button onClick={() => this.props.colorTheme('color')}>Colorful</button>
           </div>
+        </div>
         </div>
       </Auth>
     );

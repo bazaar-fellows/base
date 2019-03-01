@@ -20,7 +20,6 @@ import '../components/design/dropdown.css';
 import Background from "../components/background";
 import { Provider } from "react-redux";
 import createStore from "../store";
-import Auth from '../auth/auth';
 
 export const store = createStore();
 
