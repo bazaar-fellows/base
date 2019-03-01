@@ -3,6 +3,8 @@ import React from "react"
 import superagent from "superagent";
 import querystring from "querystring";
 import { LoginContext } from "./context.js";
+import TextField from '@material-ui/core/TextField';
+
 
 const If = props => {
     return !!props.condition ? props.children : null;
@@ -50,7 +52,20 @@ class LogInForm extends React.Component {
 
   }
 
+
   render(){
+    const styles = {
+      inputStyle: {
+        alignSelf: 'stretch',
+        height: 40,
+        marginLeft: 15,
+        marginBottom: 30,
+        color: 333333,
+        borderBottomWidth: 1,
+
+      }
+    }
+
     let authURL = null; //this.googleURL();
     return(
       <LoginContext.Consumer>
@@ -71,15 +86,21 @@ class LogInForm extends React.Component {
               <If condition={!context.loggedIn}>
                 <div>
                   <form onSubmit={e => this.handleSubmit(e, context.login)}>
-                    <input 
+                    <TextField
+
+                      style={styles.inputStyle}
                       type="text" 
                       name="username"
                       onChange={this.handleChange}
+                      label='Username'
                       />
-                    <input 
+                    <TextField
+
+                      style={styles.inputStyle}
                       type="text" 
                       name="password" 
                       onChange={this.handleChange}
+                      label="Password"
                       />
                     <input type="submit" value="login" />
                   </form>

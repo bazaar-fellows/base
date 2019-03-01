@@ -1,0 +1,20 @@
+@import '/_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.nav-link-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.navLink{
+  font-size: .4em;
+  padding: 10px;
+  padding: 1px;
+
+  &:hover{
+    color: $textColorLight
+  }
+}

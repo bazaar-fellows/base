@@ -1,5 +1,5 @@
-@import './design/_variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 nav{
@@ -7,13 +7,13 @@ nav{
   border-bottom: 2px double lightgray;
   font-family: 'Raleway', sans-serif;
   
+} 
   ul{
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    margin: .2em;
-    padding: 0;
-    
+    margin: .5em;
+  
     li{
       color: $textColorLight;
       font-size: .8em;
@@ -30,4 +30,3 @@ nav{
       }
     }
   }
-}

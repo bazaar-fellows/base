@@ -1,4 +1,4 @@
-@import './design/_variables.scss';
+@import './_variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
@@ -20,7 +20,17 @@
       max-width: 800px;
       text-align: center;
       margin: auto;
-      padding-top: 2em;
+    }
+  }
+}
+
+.dropdown-content{
+  span{
+    display:block;
+    margin-left: 5px;
+
+    &:hover{
+      color:$textColorLight;
     }
   }
 }

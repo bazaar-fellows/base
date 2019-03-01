@@ -5,22 +5,22 @@ import * as actions from '../redux/actions';
 
 class CartNum extends Component {
   render() {
-    console.log('things in cart!!!!', this.props)
     return (
-      <div>
+      <div className="cartNum">
         {this.props.cart.length}
       </div>
     )
   }
 }
 
-
+//hi
 const mapStateToProps = state => ({
   cart: state.data.cart
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
+
 });
 
 export default connect(

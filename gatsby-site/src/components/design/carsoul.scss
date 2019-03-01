@@ -1,5 +1,5 @@
-@import '../components/design/_variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 
@@ -13,8 +13,6 @@
   }
 
   body{
-    background-color: $background;
-    //background-image: linear-gradient(#17191f,#252a35);
     height: 100%;
 
     .carousel {
@@ -101,8 +99,6 @@
     }
 
     .faux-ui-facia {
-      // top: 0;
-      // right: 0;
       float: right;
       position: absolute;
       margin-top:0;

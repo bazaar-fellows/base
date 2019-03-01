@@ -1,11 +1,13 @@
 import React from "react"
-import LogInForm from '../auth/loginForm';
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import './loginPage.scss';
+import LogInForm from '../../auth/loginForm';
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import '../../components/design/loginPage.scss';
 
 import { Provider } from "react-redux";
-import {store} from './index'
+import {store} from '../index'
+
+
 
 const IndexPage = () => (
   <Provider store = {store}>

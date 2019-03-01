@@ -1,20 +1,17 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { StaticQuery, graphql } from 'gatsby';
 
 //adding connect to the reduct store
 
-import Auth from '../auth/auth';
-import './nav.scss';
-import './layout.scss';
+import '../components/design/nav.scss';
+import '../components/design/layout.scss';
 
-import Deck from './Deck.js';
+import Deck from './Deck';
 
 
 class ProductQuery extends React.Component {
 
     render(){
-      console.log('stuff from nav', this.props.data);
       return (
       <>
         <Deck allProducts={this.props.data.shop.getAllProducts}
