@@ -7,9 +7,11 @@ import '../components/design/header.scss';
 import ColorThemeButton from './ColorThemeButton';
 import Nav from './Nav';
 
+
 const Header = ({ siteTitle }, props) => (
 
   <header className={props.colorTheme}>
+
     <div>
       <Link className="cart" to='/cart'>
         <span>🛒 cart</span>
@@ -21,10 +23,10 @@ const Header = ({ siteTitle }, props) => (
 
     <div>
       <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
-        </Link>
+        
         <Nav />
+        <div>
+  </div>
       </h1>
     </div>
   </header>

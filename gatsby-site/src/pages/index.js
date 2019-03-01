@@ -52,18 +52,18 @@ const IndexPage = () => (
 
             <input type="checkbox" className="faux-ui-facia" />
             <div className="slide" slide="5" annot="This is the fifth slide title. Photo by David Marcu.">
-              <img className='carsoulImg' src='https://images.unsplash.com/photo-1492235276442-80d2360d7faa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60' alt="Slide 3" />
+              <img className='carsoulImg' src='https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg' alt="Slide 3" />
             </div>
 
 
             <input type="checkbox" className="faux-ui-facia" />
             <div className="slide" slide="4" annot="This is the fourth slide title. Photo by Ryan Lum.">
-              <img className='carsoulImg' src='https://images.unsplash.com/photo-1520580413066-ac45756bdc71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60' alt="Slide 2" />
+              <img className='carsoulImg' src='https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg' alt="Slide 2" />
             </div>
 
             <input type="checkbox" className="faux-ui-facia" />
             <div className="slide" slide="3" annot="This is the third slide title. Photo by Tomasz Paciorek.">
-              <img className='carsoulImg' src='https://images.unsplash.com/photo-1455287278107-115faab3eafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60' alt="Slide 1" />
+              <img className='carsoulImg' src='https://res.cloudinary.com/olive-atlas/image/upload/v1551387680/oliveandatlas_olive_and_atlas_handmade_dog_accessories_spring_summer_17-12.jpg' alt="Slide 1" />
             </div>
 
             <div className="counter" count="3"> / 3</div>

@@ -41,6 +41,7 @@ class Deck extends Component {
 
     const styles = {
       categoryStyle: {
+        paddingTop: 50,
         display: 'flex',
         flexDirection: 'column',
         marginLeft: '3%',

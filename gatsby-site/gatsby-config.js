@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Bazaar`,
+    title: `OLIVE + ATLAS`,
     description: `E-commerce made easy.`,
     author: `@bazaarfellows`,
     footer: `© 2019 Bazaar Fellows`,
