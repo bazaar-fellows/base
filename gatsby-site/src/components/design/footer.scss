@@ -3,36 +3,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 footer{
-  height: 4em;
-  line-height: 4em;
-  padding-bottom: .5em;
-  padding: 1em;
   position: fixed;
   bottom: 0;
+  height: 4em;
   text-align: center;
   border-top: 2px double lightgray;
   border-bottom: 2px double lightgray;
-  font-family: 'Raleway', sans-serif;
-  font-size: .5em;
   width: 100%;
-  
-  &.light{
-    background-color: $background;
-    color: $textColor;
-  }
-
-  &.dark{
-    background-color: $backgroundDark;
-    color: $textColorDark;
-  }
-
-  &.color{
-    background-color: $backgroundColor;
-    color: $textColorColor;
-  }
 
   a{
     color: $textColor;
     text-decoration: none;
+    font-size: .5em;
   }
 }

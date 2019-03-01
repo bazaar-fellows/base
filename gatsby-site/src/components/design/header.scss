@@ -6,6 +6,20 @@ header{
   padding-top: 1em;
   border-bottom: 2px double lightgray;
 
+  .dropdown-content{
+    span{
+      color: $textColor;
+      display:block;
+      padding-top: 5px;
+      margin-top: 5px;
+      margin-left: 5px;
+
+      &:hover{
+        color:$textColorLight;
+      }
+    }
+  }
+
   &.light{
     background: $background;
   }
@@ -44,6 +58,7 @@ header{
       font-family: 'Oswald', sans-serif;
       padding-bottom: 1em;
       text-align:center;
+      padding-left: 1em;
 
       a{
         text-decoration: none;
