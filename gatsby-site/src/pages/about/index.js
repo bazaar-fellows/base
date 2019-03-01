@@ -12,6 +12,7 @@ class About extends React.Component{
     this.state={
         about:'',
         url: '',
+        content: '',
         image: '',
     }
 }
