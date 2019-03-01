@@ -5,50 +5,59 @@ import Layout from '../../components/layout';
 import { store } from '../index';
 import { Provider } from "react-redux";
 import Header from '../../components/header';
+import LBDeck from './LBDeck';
 
 class LookBook extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            imgArr:[],
-            url:'',
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      dogArray: ['https://res.cloudinary.com/olive-atlas/image/upload/v1551400078/Jazz-2.jpg', 'https://res.cloudinary.com/olive-atlas/image/upload/v1551400366/olive.jpg', 'https://res.cloudinary.com/olive-atlas/image/upload/v1551400536/crickett.jpg', 'https://res.cloudinary.com/olive-atlas/image/upload/v1551400669/tiber.jpg', 'https://res.cloudinary.com/olive-atlas/image/upload/v1551400828/freya.jpg', 'https://res.cloudinary.com/olive-atlas/image/upload/v1551401044/Dug.jpg'],
+      url: '',
     }
+  }
 
-    addImage = e => {
-        e.preventDefault();
-        let url = e.target.value;
-        this.setState({url});
-        console.log('state after submit',this.state);
+  addImage = e => {
+    e.preventDefault();
+    let url = e.target.value;
+    this.setState({ url });
+    console.log('state after submit', this.state);
 
-    }
+  }
 
-    handleSubmit = e =>{
-        e.preventDefault();
-        this.setState({imgArr: [...this.state.imgArr, this.state.url]})
-    }
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({ imgArr: [...this.state.imgArr, this.state.url] })
+  }
 
-    clearImgArr=(e)=>{
-        e.preventDefault();
-        this.setState({imgArr: []});
-    }
+  clearImgArr = (e) => {
+    e.preventDefault();
+    this.setState({ imgArr: [] });
+  }
 
   render() {
-      console.log('from render',this.state);
+    console.log('from render', this.state);
     return (
-    <Provider store = {store} >
-    <Layout>
-      <div>
-         <Auth capability="create">
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="lookbook image url" onChange={(e)=>this.addImage(e)} />
-            </form>
-            <button onClick={(e)=>this.clearImgArr(e)}>Clear Lookbook</button>
-         </Auth> 
-      </div>
-    </Layout>
-    </Provider>
+      <Provider store={store} >
+        <Layout>
+          <div>
+            <Auth capability="create">
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" placeholder="lookbook image url" onChange={(e) => this.addImage(e)} />
+              </form>
+              <button onClick={(e) => this.clearImgArr(e)}>Clear Lookbook</button>
+            </Auth>
+            <div className='look-book-container'>
+              {/* <h2>look</h2> */}
+              <LBDeck pics={this.state.dogArray} />
+            </div>
+          </div>
+        </Layout>
+      </Provider>
+
     )
   }
+
+
 }
+
 export default LookBook;
