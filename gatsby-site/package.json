@@ -31,9 +31,11 @@
     "react-paypal-button": "^2.0.3",
     "react-paypal-express-checkout": "1.0.5",
     "react-redux": "^6.0.1",
+    "react-slick": "^0.23.2",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
     "superagent": "^4.1.0"
   },
   "devDependencies": {
