@@ -48,7 +48,9 @@ export class Card extends Component {
         <div>{this.props.content.name}</div>
         <img alt='product' src={this.props.content.description} style={{ width: "200px", height: '200px' }} />
         <div>{this.props.content.price}</div>
-        <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
+        <Auth capibility="delete">
+          <DeleteProduct productId={this.props.content._id} productName={this.props.content.name}/>
+        </Auth>
 
 
         <button onClick={() => this.setModalVisible(!this.state.modalVisible)}>Learn More</button>
