@@ -36,9 +36,12 @@ h2{
   height: 100%;
   width: 100%;
 }
+.cart{
+  padding: 30px;
+
+}
 .cartContainer{
   background-color: $background;
-  padding: 10px;
 }
 
 .singleCartItem{
@@ -54,5 +57,5 @@ h4{
   color: #231f20;
   font-family: 'Lato', sans-serif;
   float: right;
-  margin-right: 25px;
+  
 }
