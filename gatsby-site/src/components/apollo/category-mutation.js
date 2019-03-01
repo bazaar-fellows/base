@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+import Input from '@material-ui/core/Input';
+
 
 const POST_MUTATION = gql`
 mutation PostMutation($name: String!) {
@@ -24,7 +26,7 @@ class CreateLink extends Component {
     return (
       <div>
         <div className="flex flex-column mt3">
-          <input
+          <Input
             className="mb2"
             value={name}
             onChange={e => this.setState({ name: e.target.value })}
