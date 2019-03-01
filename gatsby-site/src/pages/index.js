@@ -38,9 +38,9 @@ const IndexPage = () => (
   <Layout>
 
       <Auth capibility="delete">
-        <p> Add category </p>
+        <p> Add Category </p>
         <Mutation/>
-        <p> delete category by id</p>
+        <p> Delete Category</p>
         <DeleteMutation/>
       </Auth>
   

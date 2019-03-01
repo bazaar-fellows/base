@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import '../design/form.scss';
-import Input from '@material-ui/core/Input';
+import TextField from '@material-ui/core/TextField';
+import { FormHelperText } from '@material-ui/core';
 
 const POST_MUTATION = gql`
 mutation PostMutation($name: String!, $description: String!, $price: Float!, $qty: Int!, $category: String! ) {
@@ -36,38 +37,59 @@ class CreateLink extends Component {
  
 
   render() {
-    const { name, description, price, qty } = this.state
-    console.log('stuff from deck', this.props)
+    const { name, description, price, qty } = this.state;
+
+    const styles = {
+      inputStyle: {
+        display: 'flex',
+        flexDirection: 'column',
+        height: 40,
+        marginLeft: 15,
+        marginBottom: 30,
+        color: '#333333',
+        borderBottomWidth: 1,
+        },
+        divStyle: {
+          borderColor: 'black',
+          borderWidth: 1,
+          borderStyle: 'solid'
+        }
+      };
+
     return (
       <div>
-        <div className="flex flex-column mt3">
-          <Input
+        <div className="productContainer" style={styles.divStyle}>
+          <TextField
+            style={styles.inputStyle}
             className="mb2"
             value={name}
             onChange={e => this.setState({ name: e.target.value })}
             type="text"
-            placeholder="A name for the product"
+            placeholder="Name"
           />
-           <textarea
+           <TextField
+           style={styles.inputStyle}
             className="mb2"
             value={description}
             onChange={e => this.setState({ description: e.target.value })}
             type="text"
-            placeholder="A description for the product"
+            placeholder="Image Url"
           />
-            <Input
+            <TextField
+            style={styles.inputStyle}
             className="mb2"
             value={price}
             onChange={e => this.setState({ price: parseInt(e.target.value) })}
             type="number"  
-            placeholder="A price for the product"
+            placeholder="Price"
           />   
-            <Input
+            <TextField
+            style={styles.inputStyle}
             className="mb2"
             value={qty}
             onChange={e => this.setState({ qty: parseInt(e.target.value) })}
             type="number" 
-            placeholder="Quantity of product"
+            placeholder="Quantity"
           />   
         </div>
         <Mutation mutation={POST_MUTATION} variables={{ name, description, price, qty, category: this.props.categoryId }}>
