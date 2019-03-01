@@ -3,42 +3,70 @@ import { When, Unless } from './conditional';
 import React, { Component } from 'react'
 import * as actions from '../redux/actions';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 import '../components/design/view-cart.scss'
 
 class ViewCart extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       total: 0.00,
       paymentSuccess: false,
     }
   }
- 
+
   /////////////////// Totaling the Cart Items ///////////////
 
-  componentDidMount(){
+  componentDidMount() {
+    this.calculateCartTotal()
+  }
+  ///////////////////////////// Render ///////////////////////
+
+  calculateCartTotal = () => {
     let total = 0;
     this.props.cart.forEach(item => {
       total = total + item.price;
     });
     console.log(' 💎 ', total);
-    this.setState({total});
+    this.setState({ total });
   }
-///////////////////////////// Render ///////////////////////
+
+  // componentDidUpdate() {
+  //   console.log('cart is updating now lol')
+  //   this.calculateCartTotal()
+  // }
+
+  deleteCartItem = async id => {
+    await this.props.deleteCartItem(id);
+    this.calculateCartTotal()
+  }
 
 
 
 
+  renderCart = () => {
+    if (this.props.cart.length <= 0) {
+      return <div>Nothing in your cart!</div>
+    }
 
+    return this.props.cart.map(item => (
+      <div className='singleCartItem'>
+        <div>{item.name}</div>
+        {console.log(item)}
+        <div>${item.price}.00  <span onClick={() => this.deleteCartItem(item.id)} style={{ marginLeft: '15px', color: 'red' }}>&times;</span></div>
+
+        {/* {item.name}: {item.price} */}
+      </div>
+    ))
+  }
 
 
   render() {
     const onSuccess = (payment) => {
       console.log(' 🛒 ');
       this.props.clearCart();
-      this.setState({paymentSuccess: true});
+      this.setState({ paymentSuccess: true });
     }
 
     const onCancel = (data) => {
@@ -64,46 +92,40 @@ class ViewCart extends Component {
     return (
       <React.Fragment>
 
-      <header>
-        <h1>Bazaar</h1>
-           
 
-        <Link className='linktohome' to="/products">Continue Shopping!</Link>
-      </header>
 
         <Unless condition={this.state.paymentSuccess}>
-        <div className='cart'>
-          <h2>Your Shopping Cart</h2>
-          <div className='cartContainer'>
-            {this.props.cart.map(item => (
-              <div className='singleCartItem'>
-                <div>{item.name}</div>
-                <div>${item.price}.00</div>
-                {/* {item.name}: {item.price} */}
+          <div className='cart'>
+            <h2>Your Shopping Cart</h2>
+            <div className='cartContainer'>
+              {this.renderCart()}
+            </div>
 
+
+            {this.props.cart.length > 0 && (
+              <div>
+
+                <h4>Total ${this.state.total}.00 </h4>
+                <PaypalExpressBtn
+                  env={env}
+                  client={client}
+                  currency={currency}
+                  total={total}
+                  onError={onError}
+                  onSuccess={onSuccess}
+                  onCancel={onCancel}
+                />
               </div>
-            ))}
+            )}
           </div>
-          <h4>Total {this.state.total} </h4>
+        </ Unless>
 
-          <PaypalExpressBtn
-        env={env}
-        client={client}
-        currency={currency}
-        total={total}
-        onError={onError}
-        onSuccess={onSuccess}
-        onCancel={onCancel}
-      />
-        </div>
-    </ Unless>
+        <When condition={this.state.paymentSuccess}>
+          <h1> Thanks for shopping at Bazaar! </h1>
 
-    <When condition={this.state.paymentSuccess}>
-      <h1> Thanks for shopping at Bazaar! </h1>
-      
-    </When>
+        </When>
 
-    
+
         {/* pass card totals, cardlist  */}
         {/* maybe add clearCart={true} as props */}
       </React.Fragment>
@@ -120,6 +142,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, getState) => ({
   updateCart: id => dispatch(actions.updateCart(id)),
   clearCart: () => dispatch(actions.clearCart()),
+  deleteCartItem: id => dispatch(actions.deleteCartItem(id))
 });
 
 export default connect(

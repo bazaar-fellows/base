@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby";
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import LoginContext from "../auth/context";
 import '../components/design/layout.scss';
 import Header from "./header"
@@ -24,10 +24,11 @@ const Layout = ({ children }, props) => (
         <Header colorTheme={props.colorTheme} siteTitle={data.site.siteMetadata.title} />
         {console.log('my props', props)}
         <div className="contentContainer">
-          <main>
+          <main className='layout-main'>
             {children}
           </main>
         </div>
+
 
         <Footer />
       </LoginContext>
