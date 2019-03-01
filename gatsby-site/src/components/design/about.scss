@@ -11,6 +11,11 @@ p {
   }
   .contentContainer{
     background-color: $background;
-    height: 100%;
-    width: 100%;
+    width: 70%;
+    float: left;
   }
+
+.aboutInfo{
+  width: 25%;
+  float: right;
+}
