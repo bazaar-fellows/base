@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import LoginContext from "../auth/context";
 import '../components/design/layout.scss';
 import Header from "./header"
-import Footer from './footer'
+import Footer from './footer';
 
 const Layout = ({ children }, props) => (
   <StaticQuery
@@ -24,7 +24,9 @@ const Layout = ({ children }, props) => (
         <Header colorTheme={props.colorTheme} siteTitle={data.site.siteMetadata.title} />
         {console.log('my props', props)}
         <div className="contentContainer">
-          <main>{children}</main>
+          <main>
+            {children}
+          </main>
         </div>
 
         <Footer />

@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 footer{
-  background-color: $background;
   height: 4em;
   line-height: 4em;
   padding-bottom: .5em;
@@ -17,6 +16,21 @@ footer{
   font-size: .5em;
   width: 100%;
   
+  &.light{
+    background-color: $background;
+    color: $textColor;
+  }
+
+  &.dark{
+    background-color: $backgroundDark;
+    color: $textColorDark;
+  }
+
+  &.color{
+    background-color: $backgroundColor;
+    color: $textColorColor;
+  }
+
   a{
     color: $textColor;
     text-decoration: none;

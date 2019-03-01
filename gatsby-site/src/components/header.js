@@ -8,6 +8,7 @@ import ColorThemeButton from './ColorThemeButton';
 import Nav from './Nav';
 
 const Header = ({ siteTitle }, props) => (
+
   <header className={props.colorTheme}>
     <div>
       <Link className="cart" to='/cart'>
@@ -27,6 +28,7 @@ const Header = ({ siteTitle }, props) => (
       </h1>
     </div>
   </header>
+
 )
 
 Header.propTypes = {
