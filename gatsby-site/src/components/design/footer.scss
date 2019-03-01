@@ -5,15 +5,16 @@
 footer{
   position: fixed;
   bottom: 0;
-  height: 4em;
+  height: 2em;
   text-align: center;
   border-top: 2px double lightgray;
   border-bottom: 2px double lightgray;
   width: 100%;
+  background-color: $background;
 
   a{
     color: $textColor;
     text-decoration: none;
-    font-size: .5em;
+    font-size: .7em;
   }
 }
