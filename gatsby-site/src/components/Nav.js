@@ -5,8 +5,10 @@ import '../components/design/navHead.scss';
 
 export class Nav extends Component {
   render() {
+
+
     return (
-      <div className='nav-link-container'>
+      <div className='nav-link-container' >
         <Link className='navLink' to="/products">SHOP</Link>
         <Link className='navLink' to="/about">ABOUT</Link>
         <Link className='navLink' to="/lookbook">LOOKBOOK</Link>
