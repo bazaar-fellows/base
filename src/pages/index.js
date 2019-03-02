@@ -8,8 +8,10 @@ import DeleteMutation from '../components/apollo/category-delete-mutation.js';
 import Auth from "../auth/auth"
 
 import { ApolloProvider } from 'react-apollo';
-
 import ApolloClient from "apollo-boost";
+import { HttpLink } from 'apollo-link-http'
+
+
 import SubHeader from '../components/subHeader';
 import Layout from "../components/layout"
 import SEO from "../components/seo";
@@ -24,7 +26,7 @@ export const store = createStore();
 
 
 export const client = new ApolloClient({
-  uri: "https://bazaarapi.herokuapp.com/graphql"
+  link: new HttpLink("https://bazaarapi.herokuapp.com/graphql"),
 });
 
 const IndexPage = () => (
