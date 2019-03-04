@@ -1,22 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
-import List from '../../components/list'
-
+import '../../components/design/products.scss';
+import ProductQuery from '../../components/product-query'
+import Background from '../../components/background';
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
+import {ApolloProvider} from 'react-apollo';
+import {client} from '..';
+
+import { Provider } from "react-redux";
+import {store} from "..";
+
+
 const Products = (props) => {
-    const products = props.data.allMarkdownRemark.edges;
-    return (
-        <Layout>
+  return (
+    <ApolloProvider client={client}>
+      <Provider store = {store}>
+
+      <Layout>
         <SEO title="Products" />
-        <h1>Products</h1>
-        <Link to="/">Go back to the homepage</Link>
-        <List items={products} />
-    </Layout>
-    )
+        <ProductQuery/>
+      <Background />
+      </Layout>
+      </Provider>
+    </ApolloProvider>
+  )
 }
 
 export const query = graphql`
