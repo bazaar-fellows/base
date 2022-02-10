@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "gatsby-plugin-sass": "2.0.10",
     "jsonwebtoken": "8.5.0",
-    "node-sass": "4.11.0",
+    "node-sass": "7.0.0",
     "querystring": "0.2.0",
     "react-cookies": "0.1.0",
     "superagent": "4.1.0"
